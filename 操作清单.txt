@@ -1,0 +1,67 @@
+1.开启数据库
+打开MySQL workbench
+cmd输入services.msc
+查看Mysql80是否开启，开启后继续以下步骤
+点击local 80
+点击左下角schemas
+选择springboot2855
+
+
+2.IDEA运行后端
+第 1 步：打开 IDEA
+打开项目目录：
+E:\MYS\java_qiqihaer_market-main
+注意是打开 整个项目根目录，不是只打开 src，也不是只打开某个前端目录。
+第 2 步：等待 IDEA 加载完成
+第 3 步：确认项目 SDK 是 JDK 1.8
+路径一般是：
+File -> Project Structure -> Project
+看两个地方：
+1）Project SDK
+1.8
+2）Project language level
+一般设成：
+8 - Lambdas, type annotations etc.
+如果这里不是 1.8，项目可能会启动异常。
+第 4 步：找到主启动类
+在左侧项目结构里依次展开：
+src
+ └─ main
+    └─ java
+       └─ com
+          └─ SpringbootSchemaApplication.java
+打开这个类。
+你应该能看到类似这种结构：
+
+@SpringBootApplication
+public class SpringbootSchemaApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(SpringbootSchemaApplication.class, args);
+    }
+}
+这就是整个后端项目的入口。
+第 5 步：运行主启动类
+方式 A：右键运行
+在 SpringbootSchemaApplication.java 文件里：
+右键空白处
+或右键类名
+点击：
+Run 'SpringbootSchemaApplication'
+方式 B：点击绿色三角形
+在 main 方法左边或者类名旁边会有绿色小三角：
+点一下
+选择运行
+
+
+3.启动后台前端
+cmd
+cd /d E:\MYS\java_qiqihaer_market-main\src\main\resources\admin\admin
+npm run serve
+访问：
+http://localhost:8081/#/login
+
+4.启动用户前端
+cd /d E:\MYS\java_qiqihaer_market-main\src\main\resources\front\front
+npm run serve
+访问：
+http://localhost:8082/#/index/home
