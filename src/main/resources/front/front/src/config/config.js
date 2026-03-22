@@ -7,7 +7,7 @@ export default {
             url: '/index/zhunongshangpin'
         },
         {
-            name: '粮油资讯',
+            name: '粮油专题',
             url: '/index/zhunongtuopin'
         },
         {

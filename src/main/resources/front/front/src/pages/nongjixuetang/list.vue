@@ -95,7 +95,7 @@
         baseUrl: '',
         breadcrumbItem: [
           {
-            name: '农技学堂'
+            name: '粮油知识'
           }
         ],
         formSearch: {
