@@ -3,15 +3,15 @@ export default {
 	name: '/springboot2855f2n2',
     indexNav: [
         {
-            name: '助农商品',
+            name: '粮油商品',
             url: '/index/zhunongshangpin'
         },
         {
-            name: '助农脱贫',
+            name: '粮油资讯',
             url: '/index/zhunongtuopin'
         },
         {
-            name: '农技学堂',
+            name: '粮油知识',
             url: '/index/nongjixuetang'
         },
         {

@@ -186,7 +186,7 @@ CREATE TABLE `discussnongjixuetang` (
   `content` longtext NOT NULL COMMENT '评论内容',
   `reply` longtext COMMENT '回复内容',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='农技学堂评论表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='粮油知识评论表';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -215,7 +215,7 @@ CREATE TABLE `discusszhunongshangpin` (
   `content` longtext NOT NULL COMMENT '评论内容',
   `reply` longtext COMMENT '回复内容',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='助农商品评论表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='粮油商品评论表';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -244,7 +244,7 @@ CREATE TABLE `discusszhunongtuopin` (
   `content` longtext NOT NULL COMMENT '评论内容',
   `reply` longtext COMMENT '回复内容',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='助农脱贫评论表';
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='粮油专题评论表';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -328,16 +328,16 @@ DROP TABLE IF EXISTS `nonghu`;
 CREATE TABLE `nonghu` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
   `addtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
-  `nonghuzhanghao` varchar(200) NOT NULL COMMENT '农户账号',
+  `nonghuzhanghao` varchar(200) NOT NULL COMMENT '供应商账号',
   `mima` varchar(200) NOT NULL COMMENT '密码',
-  `nonghuxingming` varchar(200) NOT NULL COMMENT '农户姓名',
+  `nonghuxingming` varchar(200) NOT NULL COMMENT '供应商姓名',
   `xingbie` varchar(200) DEFAULT NULL COMMENT '性别',
-  `nonghudianhua` varchar(200) DEFAULT NULL COMMENT '农户电话',
+  `nonghudianhua` varchar(200) DEFAULT NULL COMMENT '供应商电话',
   `touxiang` longtext COMMENT '头像',
   `money` double DEFAULT '0' COMMENT '余额',
   PRIMARY KEY (`id`),
   UNIQUE KEY `nonghuzhanghao` (`nonghuzhanghao`)
-) ENGINE=InnoDB AUTO_INCREMENT=1707384984081 DEFAULT CHARSET=utf8 COMMENT='农商';
+) ENGINE=InnoDB AUTO_INCREMENT=1707384984081 DEFAULT CHARSET=utf8 COMMENT='供应商';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -370,7 +370,7 @@ CREATE TABLE `nongjixuetang` (
   `discussnum` int(11) DEFAULT '0' COMMENT '评论数',
   `storeupnum` int(11) DEFAULT '0' COMMENT '收藏数',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=80 DEFAULT CHARSET=utf8 COMMENT='农技学堂';
+) ENGINE=InnoDB AUTO_INCREMENT=80 DEFAULT CHARSET=utf8 COMMENT='粮油知识';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -585,8 +585,8 @@ CREATE TABLE `zhunongshangpin` (
   `shengchandi` varchar(200) DEFAULT NULL COMMENT '生产地',
   `guige` varchar(200) DEFAULT NULL COMMENT '规格',
   `chanpinxiangqing` longtext COMMENT '产品详情',
-  `nonghuzhanghao` varchar(200) DEFAULT NULL COMMENT '农户账号',
-  `nonghuxingming` varchar(200) DEFAULT NULL COMMENT '农户姓名',
+  `nonghuzhanghao` varchar(200) DEFAULT NULL COMMENT '供应商账号',
+  `nonghuxingming` varchar(200) DEFAULT NULL COMMENT '供应商姓名',
   `onelimittimes` int(11) DEFAULT NULL COMMENT '单限',
   `alllimittimes` int(11) DEFAULT NULL COMMENT '库存',
   `clicktime` datetime DEFAULT NULL COMMENT '最近点击时间',
@@ -597,7 +597,7 @@ CREATE TABLE `zhunongshangpin` (
   `storeupnum` int(11) DEFAULT '0' COMMENT '收藏数',
   PRIMARY KEY (`id`),
   UNIQUE KEY `chanpinbianhao` (`chanpinbianhao`)
-) ENGINE=InnoDB AUTO_INCREMENT=60 DEFAULT CHARSET=utf8 COMMENT='助农商品';
+) ENGINE=InnoDB AUTO_INCREMENT=60 DEFAULT CHARSET=utf8 COMMENT='粮油商品';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -631,7 +631,7 @@ CREATE TABLE `zhunongtuopin` (
   `storeupnum` int(11) DEFAULT '0' COMMENT '收藏数',
   PRIMARY KEY (`id`),
   UNIQUE KEY `wenzhangbianhao` (`wenzhangbianhao`)
-) ENGINE=InnoDB AUTO_INCREMENT=70 DEFAULT CHARSET=utf8 COMMENT='助农脱贫';
+) ENGINE=InnoDB AUTO_INCREMENT=70 DEFAULT CHARSET=utf8 COMMENT='粮油专题';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
