@@ -2,10 +2,10 @@
 	<div>
 		<div class="container" :style='{"minHeight":"100vh","alignItems":"center","background":"url(http://codegen.caihongy.cn/20230930/02567f8bbf29475095a68adeb32aa995.jpg)","display":"flex","width":"100%","backgroundSize":"100% 100%","backgroundPosition":"center bottom","backgroundRepeat":"no-repeat","justifyContent":"center"}'>
 			<el-form v-if="pageFlag=='register'" :style='{"border":"0px solid #f6f6f6","padding":"30px 5% 20px 45%","margin":"50px auto 50px","borderRadius":"0px","textAlign":"center","background":"url(http://codegen.caihongy.cn/20230930/f52d5a109d7248d69a33749b059f901d.jpg) no-repeat left center / 50% 101%,#fff","width":"75%","height":"auto"}' ref="rgsForm" class="rgs-form" :model="rgsForm" :rules="rules">
-				<div v-if="true" :style='{"padding":"0px","margin":"0px auto 20px","borderColor":"#eee","color":"#57759b","textAlign":"center","display":"inline-block","background":"#fff","borderWidth":"0px","width":"100%","lineHeight":"40px","fontSize":"24px","borderStyle":"solid","fontWeight":"600"}' class="title">北部湾地区助农平台注册</div>
+				<div v-if="true" :style='{"padding":"0px","margin":"0px auto 20px","borderColor":"#eee","color":"#57759b","textAlign":"center","display":"inline-block","background":"#fff","borderWidth":"0px","width":"100%","lineHeight":"40px","fontSize":"24px","borderStyle":"solid","fontWeight":"600"}' class="title">粮油产品线上销售平台注册</div>
 				<el-form-item :style='{"padding":"0 0px","margin":"0 auto 15px","textAlign":"left","flexWrap":"wrap","display":"block","width":"100%","fontSize":"inherit","position":"relative","height":"auto"}' class="list-item" v-if="tableName=='nonghu'">
-					<div v-if="true" :style='{"padding":"0 10px","color":"#333","textAlign":"right","left":"-150px","display":"inline-block","width":"150px","lineHeight":"40px","fontSize":"14px","position":"absolute","order":"2"}' class="lable" :class="changeRules('nonghuzhanghao')?'required':''">农户账号：</div>
-					<el-input  v-model="ruleForm.nonghuzhanghao"  autocomplete="off" placeholder="农户账号"  type="text"  />
+					<div v-if="true" :style='{"padding":"0 10px","color":"#333","textAlign":"right","left":"-150px","display":"inline-block","width":"150px","lineHeight":"40px","fontSize":"14px","position":"absolute","order":"2"}' class="lable" :class="changeRules('nonghuzhanghao')?'required':''">供应商账号：</div>
+					<el-input  v-model="ruleForm.nonghuzhanghao"  autocomplete="off" placeholder="供应商账号"  type="text"  />
 				</el-form-item>
 				<el-form-item :style='{"padding":"0 0px","margin":"0 auto 15px","textAlign":"left","flexWrap":"wrap","display":"block","width":"100%","fontSize":"inherit","position":"relative","height":"auto"}' class="list-item" v-if="tableName=='nonghu'">
 					<div v-if="true" :style='{"padding":"0 10px","color":"#333","textAlign":"right","left":"-150px","display":"inline-block","width":"150px","lineHeight":"40px","fontSize":"14px","position":"absolute","order":"2"}' class="lable" :class="changeRules('mima')?'required':''">密码：</div>
@@ -16,8 +16,8 @@
 					<el-input  v-model="ruleForm.mima2" autocomplete="off" placeholder="确认密码" type="password" />
 				</el-form-item>
 				<el-form-item :style='{"padding":"0 0px","margin":"0 auto 15px","textAlign":"left","flexWrap":"wrap","display":"block","width":"100%","fontSize":"inherit","position":"relative","height":"auto"}' class="list-item" v-if="tableName=='nonghu'">
-					<div v-if="true" :style='{"padding":"0 10px","color":"#333","textAlign":"right","left":"-150px","display":"inline-block","width":"150px","lineHeight":"40px","fontSize":"14px","position":"absolute","order":"2"}' class="lable" :class="changeRules('nonghuxingming')?'required':''">农户姓名：</div>
-					<el-input  v-model="ruleForm.nonghuxingming"  autocomplete="off" placeholder="农户姓名"  type="text"  />
+					<div v-if="true" :style='{"padding":"0 10px","color":"#333","textAlign":"right","left":"-150px","display":"inline-block","width":"150px","lineHeight":"40px","fontSize":"14px","position":"absolute","order":"2"}' class="lable" :class="changeRules('nonghuxingming')?'required':''">供应商姓名：</div>
+					<el-input  v-model="ruleForm.nonghuxingming"  autocomplete="off" placeholder="供应商姓名"  type="text"  />
 				</el-form-item>
 				<el-form-item :style='{"padding":"0 0px","margin":"0 auto 15px","textAlign":"left","flexWrap":"wrap","display":"block","width":"100%","fontSize":"inherit","position":"relative","height":"auto"}' class="list-item" v-if="tableName=='nonghu'">
 					<div v-if="true" :style='{"padding":"0 10px","color":"#333","textAlign":"right","left":"-150px","display":"inline-block","width":"150px","lineHeight":"40px","fontSize":"14px","position":"absolute","order":"2"}' class="lable" :class="changeRules('xingbie')?'required':''">性别：</div>
@@ -31,8 +31,8 @@
                     </el-select>
 				</el-form-item>
 				<el-form-item :style='{"padding":"0 0px","margin":"0 auto 15px","textAlign":"left","flexWrap":"wrap","display":"block","width":"100%","fontSize":"inherit","position":"relative","height":"auto"}' class="list-item" v-if="tableName=='nonghu'">
-					<div v-if="true" :style='{"padding":"0 10px","color":"#333","textAlign":"right","left":"-150px","display":"inline-block","width":"150px","lineHeight":"40px","fontSize":"14px","position":"absolute","order":"2"}' class="lable" :class="changeRules('nonghudianhua')?'required':''">农户电话：</div>
-					<el-input  v-model="ruleForm.nonghudianhua"  autocomplete="off" placeholder="农户电话"  type="text"  />
+					<div v-if="true" :style='{"padding":"0 10px","color":"#333","textAlign":"right","left":"-150px","display":"inline-block","width":"150px","lineHeight":"40px","fontSize":"14px","position":"absolute","order":"2"}' class="lable" :class="changeRules('nonghudianhua')?'required':''">供应商电话：</div>
+					<el-input  v-model="ruleForm.nonghudianhua"  autocomplete="off" placeholder="供应商电话"  type="text"  />
 				</el-form-item>
 				<el-form-item :style='{"padding":"0 0px","margin":"0 auto 15px","textAlign":"left","flexWrap":"wrap","display":"block","width":"100%","fontSize":"inherit","position":"relative","height":"auto"}' class="list-item" v-if="tableName=='nonghu'">
 					<div v-if="true" :style='{"padding":"0 10px","color":"#333","textAlign":"right","left":"-150px","display":"inline-block","width":"150px","lineHeight":"40px","fontSize":"14px","position":"absolute","order":"2"}' class="lable" :class="changeRules('touxiang')?'required':''">头像：</div>
@@ -139,13 +139,13 @@ export default {
 				}
 			}
 			if ('nonghu' == this.tableName) {
-				this.rules.nonghuzhanghao = [{ required: true, message: '请输入农户账号', trigger: 'blur' }]
+				this.rules.nonghuzhanghao = [{ required: true, message: '请输入供应商账号', trigger: 'blur' }]
 			}
 			if ('nonghu' == this.tableName) {
 				this.rules.mima = [{ required: true, message: '请输入密码', trigger: 'blur' }]
 			}
 			if ('nonghu' == this.tableName) {
-				this.rules.nonghuxingming = [{ required: true, message: '请输入农户姓名', trigger: 'blur' }]
+				this.rules.nonghuxingming = [{ required: true, message: '请输入供应商姓名', trigger: 'blur' }]
 			}
 			if ('yonghu' == this.tableName) {
 				this.rules.yonghuzhanghao = [{ required: true, message: '请输入用户账号', trigger: 'blur' }]
@@ -192,7 +192,7 @@ export default {
 		login() {
 			var url=this.tableName+"/register";
 					if((!this.ruleForm.nonghuzhanghao) && `nonghu` == this.tableName){
-						this.$message.error(`农户账号不能为空`);
+						this.$message.error(`供应商账号不能为空`);
 						return
 					}
 					if((!this.ruleForm.mima) && `nonghu` == this.tableName){
@@ -204,11 +204,11 @@ export default {
 						return
 					}
 					if((!this.ruleForm.nonghuxingming) && `nonghu` == this.tableName){
-						this.$message.error(`农户姓名不能为空`);
+						this.$message.error(`供应商姓名不能为空`);
 						return
 					}
 					if(`nonghu` == this.tableName && this.ruleForm.nonghudianhua &&(!this.$validate.isMobile(this.ruleForm.nonghudianhua))){
-						this.$message.error(`农户电话应输入手机格式`);
+						this.$message.error(`供应商电话应输入手机格式`);
 						return
 					}
             if(this.ruleForm.touxiang!=null) {

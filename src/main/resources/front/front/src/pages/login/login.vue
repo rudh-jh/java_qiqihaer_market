@@ -3,7 +3,7 @@
 	<div class="container" :style='{"minHeight":"100vh","alignItems":"center","background":"url(http://codegen.caihongy.cn/20231124/b190412b9fd646b0b4c008f3a500ca6f.png)","display":"flex","width":"100%","backgroundSize":"cover","backgroundPosition":"center center","backgroundRepeat":"no-repeat","justifyContent":"center"}'>
 		<el-form ref="loginForm" :model="loginForm" :style='{"padding":"40px 20px 20px","boxShadow":"none","margin":"0","borderRadius":"10px","background":"none","width":"600px","position":"relative","height":"auto"}' :rules="rules">
 			<div v-if="false" :style='{"margin":"0 0 10px 0","color":"rgba(64, 158, 255, 1)","textAlign":"center","width":"100%","lineHeight":"44px","fontSize":"20px","textShadow":"4px 4px 2px rgba(64, 158, 255, .5)"}'>USER / LOGIN</div>
-			<div v-if="true" :style='{"margin":"0 0 20px 0","color":"#A293B6","textAlign":"center","width":"100%","lineHeight":"44px","fontSize":"30px","textShadow":"none","fontWeight":"bold"}'>北部湾地区助农平台登录</div>
+			<div v-if="true" :style='{"margin":"0 0 20px 0","color":"#A293B6","textAlign":"center","width":"100%","lineHeight":"44px","fontSize":"30px","textShadow":"none","fontWeight":"bold"}'>粮油产品线上销售平台</div>
 			<el-form-item v-if="loginType==1" class="list-item" :style='{"width":"100%","margin":"0 auto 30px"}' prop="username">
 				<div v-if="true" :style='{"width":"64px","lineHeight":"44px","fontSize":"16px","color":"#000"}'>账号：</div>
 				<input :style='{"border":"1px solid #A293B6","padding":"0 10px","boxShadow":"none","outline":"none","color":"#000","outlineOffset":"0","background":"rgba(255,255,255,.8)","width":"450px","fontSize":"14px","height":"50px"}' v-model="loginForm.username" placeholder="请输入账户">

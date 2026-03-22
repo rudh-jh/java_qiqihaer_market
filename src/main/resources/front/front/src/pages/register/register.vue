@@ -4,10 +4,10 @@
 	<div class="container" :style='{"minHeight":"100vh","alignItems":"center","background":"url(http://codegen.caihongy.cn/20231124/ca7faea83f7d45558b36d644e432cfae.png)","display":"flex","width":"100%","backgroundSize":"cover","backgroundPosition":"center center","backgroundRepeat":"no-repeat","justifyContent":"center"}'>
 		<el-form class='rgs-form' v-if="pageFlag=='register'" :style='{"padding":"20px","boxShadow":"none","margin":"0","borderRadius":"10px","background":"none","width":"600px","height":"auto"}' ref="registerForm" :model="registerForm" :rules="rules">
 			<div v-if="false" :style='{"margin":"0 0 10px 0","color":"rgba(64, 158, 255, 1)","textAlign":"center","width":"100%","lineHeight":"44px","fontSize":"20px","textShadow":"4px 4px 2px rgba(64, 158, 255, .5)"}'>USER / REGISTER</div>
-			<div v-if="true" :style='{"margin":"0 0 20px 0","color":"#A293B6","textAlign":"center","width":"100%","lineHeight":"44px","fontSize":"30px","textShadow":"none","fontWeight":"bold"}'>北部湾地区助农平台注册</p></div>
+			<div v-if="true" :style='{"margin":"0 0 20px 0","color":"#A293B6","textAlign":"center","width":"100%","lineHeight":"44px","fontSize":"30px","textShadow":"none","fontWeight":"bold"}'>粮油产品线上销售平台注册</p></div>
 			<el-form-item :style='{"width":"100%","padding":"0","margin":"0 auto 15px","height":"auto"}' v-if="tableName=='nonghu'" prop="nonghuzhanghao">
-				<div v-if="true" :style='{"width":"94px","lineHeight":"44px","fontSize":"14px","color":"#000"}' :class="changeRules('nonghuzhanghao')?'required':''">农户账号：</div>
-				<el-input v-model="registerForm.nonghuzhanghao"  placeholder="请输入农户账号" />
+				<div v-if="true" :style='{"width":"94px","lineHeight":"44px","fontSize":"14px","color":"#000"}' :class="changeRules('nonghuzhanghao')?'required':''">供应商账号：</div>
+				<el-input v-model="registerForm.nonghuzhanghao"  placeholder="请输入供应商账号" />
 			</el-form-item>
 			<el-form-item :style='{"width":"100%","padding":"0","margin":"0 auto 15px","height":"auto"}' v-if="tableName=='nonghu'" prop="mima">
 				<div v-if="true" :style='{"width":"94px","lineHeight":"44px","fontSize":"14px","color":"#000"}' :class="changeRules('mima')?'required':''">密码：</div>
@@ -18,8 +18,8 @@
 				<el-input v-model="registerForm.mima2" type="password" placeholder="请再次输入密码" />
 			</el-form-item>
 			<el-form-item :style='{"width":"100%","padding":"0","margin":"0 auto 15px","height":"auto"}' v-if="tableName=='nonghu'" prop="nonghuxingming">
-				<div v-if="true" :style='{"width":"94px","lineHeight":"44px","fontSize":"14px","color":"#000"}' :class="changeRules('nonghuxingming')?'required':''">农户姓名：</div>
-				<el-input v-model="registerForm.nonghuxingming"  placeholder="请输入农户姓名" />
+				<div v-if="true" :style='{"width":"94px","lineHeight":"44px","fontSize":"14px","color":"#000"}' :class="changeRules('nonghuxingming')?'required':''">供应商姓名：</div>
+				<el-input v-model="registerForm.nonghuxingming"  placeholder="请输入供应商姓名" />
 			</el-form-item>
 			<el-form-item :style='{"width":"100%","padding":"0","margin":"0 auto 15px","height":"auto"}' v-if="tableName=='nonghu'" prop="xingbie">
 				<div v-if="true" :style='{"width":"94px","lineHeight":"44px","fontSize":"14px","color":"#000"}' :class="changeRules('xingbie')?'required':''">性别：</div>
@@ -33,8 +33,8 @@
                 </el-select>
 			</el-form-item>
 			<el-form-item :style='{"width":"100%","padding":"0","margin":"0 auto 15px","height":"auto"}' v-if="tableName=='nonghu'" prop="nonghudianhua">
-				<div v-if="true" :style='{"width":"94px","lineHeight":"44px","fontSize":"14px","color":"#000"}' :class="changeRules('nonghudianhua')?'required':''">农户电话：</div>
-				<el-input v-model="registerForm.nonghudianhua"  placeholder="请输入农户电话" />
+				<div v-if="true" :style='{"width":"94px","lineHeight":"44px","fontSize":"14px","color":"#000"}' :class="changeRules('nonghudianhua')?'required':''">供应商电话：</div>
+				<el-input v-model="registerForm.nonghudianhua"  placeholder="请输入供应商电话" />
 			</el-form-item>
 			<el-form-item :style='{"width":"100%","padding":"0","margin":"0 auto 15px","height":"auto"}' v-if="tableName=='nonghu'" prop="touxiang">
 				<div v-if="true" :style='{"width":"94px","lineHeight":"44px","fontSize":"14px","color":"#000"}' :class="changeRules('touxiang')?'required':''">头像：</div>
@@ -146,13 +146,13 @@ export default {
 				}
 			}
 			if ('nonghu' == this.tableName) {
-				this.requiredRules.nonghuzhanghao = [{ required: true, message: '请输入农户账号', trigger: 'blur' }]
+				this.requiredRules.nonghuzhanghao = [{ required: true, message: '请输入供应商账号', trigger: 'blur' }]
 			}
 			if ('nonghu' == this.tableName) {
 				this.requiredRules.mima = [{ required: true, message: '请输入密码', trigger: 'blur' }]
 			}
 			if ('nonghu' == this.tableName) {
-				this.requiredRules.nonghuxingming = [{ required: true, message: '请输入农户姓名', trigger: 'blur' }]
+				this.requiredRules.nonghuxingming = [{ required: true, message: '请输入供应商姓名', trigger: 'blur' }]
 			}
 			if ('yonghu' == this.tableName) {
 				this.requiredRules.yonghuzhanghao = [{ required: true, message: '请输入用户账号', trigger: 'blur' }]
@@ -169,13 +169,13 @@ export default {
 		this.pageFlag = this.$route.query.pageFlag;
 		if(this.$route.query.pageFlag=='register'){
 		  if ('nonghu' == this.tableName) {
-			this.rules.nonghuzhanghao = [{ required: true, message: '请输入农户账号', trigger: 'blur' }];
+			this.rules.nonghuzhanghao = [{ required: true, message: '请输入供应商账号', trigger: 'blur' }];
 		  }
 		  if ('nonghu' == this.tableName) {
 			this.rules.mima = [{ required: true, message: '请输入密码', trigger: 'blur' }];
 		  }
 		  if ('nonghu' == this.tableName) {
-			this.rules.nonghuxingming = [{ required: true, message: '请输入农户姓名', trigger: 'blur' }];
+			this.rules.nonghuxingming = [{ required: true, message: '请输入供应商姓名', trigger: 'blur' }];
 		  }
 			this.nonghuxingbieOptions = "男,女".split(',');
 		  if ('nonghu' == this.tableName) {
@@ -230,7 +230,7 @@ export default {
           if (valid) {
             var url=this.tableName+"/register";
 				if((!this.registerForm.nonghuzhanghao) && `nonghu` == this.tableName){
-					this.$message.error(`农户账号不能为空`);
+					this.$message.error(`供应商账号不能为空`);
 					return
 				}
                if(`nonghu` == this.tableName && this.registerForm.mima!=this.registerForm.mima2) {
@@ -242,11 +242,11 @@ export default {
 					return
 				}
 				if((!this.registerForm.nonghuxingming) && `nonghu` == this.tableName){
-					this.$message.error(`农户姓名不能为空`);
+					this.$message.error(`供应商姓名不能为空`);
 					return
 				}
 					if(`nonghu` == this.tableName && this.registerForm.nonghudianhua &&(!this.$validate.isMobile2(this.registerForm.nonghudianhua))){
-						this.$message.error(`农户电话应输入手机格式`);
+						this.$message.error(`供应商电话应输入手机格式`);
 						return
 					}
 				if((!this.registerForm.yonghuzhanghao) && `yonghu` == this.tableName){
