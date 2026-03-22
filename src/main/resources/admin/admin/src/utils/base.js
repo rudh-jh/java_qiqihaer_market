@@ -9,7 +9,7 @@ const base = {
     },
     getProjectName(){
         return {
-            projectName: "北部湾地区助农平台"
+            projectName: "粮油产品线上销售平台"
         } 
     }
 }

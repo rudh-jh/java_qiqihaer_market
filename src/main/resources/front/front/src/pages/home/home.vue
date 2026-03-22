@@ -185,7 +185,7 @@
 	</div>
 	
     <div class="title" :style='{"width":"200px","margin":"100px 0 20px","lineHeight":"1","textAlign":"left","background":"none"}'>
-		<span :style='{"color":"#71509E","fontSize":"32px"}'>助农商品推荐</span>
+		<span :style='{"color":"#71509E","fontSize":"32px"}'>粮油商品推荐</span>
 	</div>
 	
 	
@@ -245,7 +245,7 @@
 	</div>
 	
 	<div class="title" :style='{"width":"200px","margin":"10px 0","lineHeight":"54px","textAlign":"center","background":"none"}'>
-	  <span :style='{"color":"#71509E","fontSize":"32px"}'>助农脱贫展示</span>
+	  <span :style='{"color":"#71509E","fontSize":"32px"}'>粮油专题展示</span>
 	</div>
 	
 	

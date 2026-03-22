@@ -115,14 +115,14 @@
 					</el-table-column>
 					<el-table-column :resizable='true' :sortable='true'  
 						prop="nonghuzhanghao"
-						label="农户账号">
+						label="供应商账号">
 						<template slot-scope="scope">
 							{{scope.row.nonghuzhanghao}}
 						</template>
 					</el-table-column>
 					<el-table-column :resizable='true' :sortable='true'  
 						prop="nonghuxingming"
-						label="农户姓名">
+						label="供应商姓名">
 						<template slot-scope="scope">
 							{{scope.row.nonghuxingming}}
 						</template>

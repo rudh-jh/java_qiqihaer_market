@@ -12,12 +12,12 @@
 		</div>
 		<div :style='{"padding":"0 20px","borderColor":"#efefef","borderWidth":"0","display":"flex","width":"100%","lineHeight":"40px","borderStyle":"solid","height":"auto"}' v-if="userTableName=='nonghu'">
 			<span class="icon iconfont icon-shouye-zhihui" :style='{"padding":"0 5px","fontSize":"14px","color":"#333","display":"none"}'></span>
-			<div :style='{"color":"#333","fontSize":"14px","display":"none"}'>农户账号</div>
+			<div :style='{"color":"#333","fontSize":"14px","display":"none"}'>供应商账号</div>
 			<div :style='{"fontSize":"20px","color":"#000","textAlign":"left","flex":1,"fontWeight":"bold"}'>{{sessionForm.nonghuzhanghao}}</div>
 		</div>
 		<div :style='{"padding":"0 20px","borderColor":"#efefef","borderWidth":"0","display":"flex","width":"100%","lineHeight":"1","borderStyle":"solid","height":"auto"}' v-if="userTableName=='nonghu'">
 			<span class="icon iconfont icon-shouye-zhihui" :style='{"padding":"0 5px","fontSize":"14px","color":"#333","display":"none"}'></span>
-			<div :style='{"color":"#000","fontSize":"14px","display":"none"}'>农户姓名</div>
+			<div :style='{"color":"#000","fontSize":"14px","display":"none"}'>供应商姓名</div>
 			<div :style='{"fontSize":"16px","color":"#000","textAlign":"left","flex":1}'>{{sessionForm.nonghuxingming}}</div>
 		</div>
 		<div :style='{"padding":"80px 20px 0","borderColor":"#efefef","flexWrap":"wrap","borderWidth":"0","display":"flex","width":"100%","lineHeight":"1.5","borderStyle":"solid","height":"auto"}' v-if="userTableName=='nonghu'">
@@ -27,7 +27,7 @@
 		</div>
 		<div :style='{"padding":"80px 20px 0","borderColor":"#efefef","flexWrap":"wrap","borderWidth":"0","display":"flex","width":"100%","lineHeight":"1.5","borderStyle":"solid","height":"auto"}' v-if="userTableName=='nonghu'">
 			<span class="icon iconfont icon-shouye-zhihui" :style='{"padding":"0 5px","fontSize":"14px","color":"#333","display":"none"}'></span>
-			<div :style='{"color":"#000","width":"100%","fontSize":"16px"}'>农户电话</div>
+			<div :style='{"color":"#000","width":"100%","fontSize":"16px"}'>供应商电话</div>
 			<div :style='{"width":"100%","fontSize":"16px","color":"#000","textAlign":"left","flex":1}'>{{sessionForm.nonghudianhua}}</div>
 		</div>
 		<div :style='{"padding":"80px 20px 0","borderColor":"#efefef","flexWrap":"wrap","borderWidth":"0","display":"flex","width":"100%","lineHeight":"1.5","borderStyle":"solid","height":"auto"}' v-if="userTableName=='nonghu'">
@@ -71,19 +71,19 @@
     <el-tabs tab-position="left" :style='{"width":"65%","flexWrap":"wrap","background":"none","justifyContent":"center","display":"flex"}' @tab-click="handleClick">
       <el-tab-pane label="个人中心">
         <el-form class="center-preview-pv" ref="sessionForm" :model="sessionForm" :rules="rules" label-width="80px">
-          <el-form-item :style='{"padding":"10px","margin":"0 0 10px","background":"none"}' v-if="userTableName=='nonghu'" label="农户账号" prop="nonghuzhanghao">
-            <el-input v-model="sessionForm.nonghuzhanghao" placeholder="农户账号" readonly></el-input>
+          <el-form-item :style='{"padding":"10px","margin":"0 0 10px","background":"none"}' v-if="userTableName=='nonghu'" label="供应商账号" prop="nonghuzhanghao">
+            <el-input v-model="sessionForm.nonghuzhanghao" placeholder="供应商账号" readonly></el-input>
           </el-form-item>
-          <el-form-item :style='{"padding":"10px","margin":"0 0 10px","background":"none"}' v-if="userTableName=='nonghu'" label="农户姓名" prop="nonghuxingming">
-            <el-input v-model="sessionForm.nonghuxingming" placeholder="农户姓名" ></el-input>
+          <el-form-item :style='{"padding":"10px","margin":"0 0 10px","background":"none"}' v-if="userTableName=='nonghu'" label="供应商姓名" prop="nonghuxingming">
+            <el-input v-model="sessionForm.nonghuxingming" placeholder="供应商姓名" ></el-input>
           </el-form-item>
           <el-form-item :style='{"padding":"10px","margin":"0 0 10px","background":"none"}' v-if="userTableName=='nonghu'" label="性别">
             <el-select v-model="sessionForm.xingbie" placeholder="请选择性别" >
               <el-option v-for="(item, index) in dynamicProp.xingbie" :key="index" :label="item" :value="item"></el-option>
             </el-select>
           </el-form-item>
-          <el-form-item :style='{"padding":"10px","margin":"0 0 10px","background":"none"}' v-if="userTableName=='nonghu'" label="农户电话" prop="nonghudianhua">
-            <el-input v-model="sessionForm.nonghudianhua" placeholder="农户电话" ></el-input>
+          <el-form-item :style='{"padding":"10px","margin":"0 0 10px","background":"none"}' v-if="userTableName=='nonghu'" label="供应商电话" prop="nonghudianhua">
+            <el-input v-model="sessionForm.nonghudianhua" placeholder="供应商电话" ></el-input>
           </el-form-item>
           <el-form-item :style='{"padding":"10px","margin":"0 0 10px","background":"none"}' v-if="userTableName=='nonghu'" label="头像">
 			<file-upload
@@ -381,13 +381,13 @@
 		}
 
       if ('nonghu' == this.userTableName) {
-        this.$set(this.rules, 'nonghuzhanghao', [{ required: true, message: '请输入农户账号', trigger: 'blur' }]);
+        this.$set(this.rules, 'nonghuzhanghao', [{ required: true, message: '请输入供应商账号', trigger: 'blur' }]);
       }
       if ('nonghu' == this.userTableName) {
         this.$set(this.rules, 'mima', [{ required: true, message: '请输入密码', trigger: 'blur' }]);
       }
       if ('nonghu' == this.userTableName) {
-        this.$set(this.rules, 'nonghuxingming', [{ required: true, message: '请输入农户姓名', trigger: 'blur' }]);
+        this.$set(this.rules, 'nonghuxingming', [{ required: true, message: '请输入供应商姓名', trigger: 'blur' }]);
       }
 			if ('nonghu' == this.userTableName) {
         this.$set(this.rules, 'nonghudianhua', [{ required: false, validator: this.$validate.isMobile, trigger: 'blur' }]);

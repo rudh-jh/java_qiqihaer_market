@@ -80,17 +80,17 @@
 				<el-form-item :style='{"width":"48%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' v-else class="input" label="规格" prop="guige">
 					<el-input v-model="ruleForm.guige" placeholder="规格" readonly></el-input>
 				</el-form-item>
-				<el-form-item :style='{"width":"48%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' class="input" v-if="type!='info'"  label="农户账号" prop="nonghuzhanghao">
-					<el-input v-model="ruleForm.nonghuzhanghao" placeholder="农户账号" clearable  :readonly="ro.nonghuzhanghao"></el-input>
+				<el-form-item :style='{"width":"48%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' class="input" v-if="type!='info'"  label="供应商账号" prop="nonghuzhanghao">
+					<el-input v-model="ruleForm.nonghuzhanghao" placeholder="供应商账号" clearable  :readonly="ro.nonghuzhanghao"></el-input>
 				</el-form-item>
-				<el-form-item :style='{"width":"48%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' v-else class="input" label="农户账号" prop="nonghuzhanghao">
-					<el-input v-model="ruleForm.nonghuzhanghao" placeholder="农户账号" readonly></el-input>
+				<el-form-item :style='{"width":"48%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' v-else class="input" label="供应商账号" prop="nonghuzhanghao">
+					<el-input v-model="ruleForm.nonghuzhanghao" placeholder="供应商账号" readonly></el-input>
 				</el-form-item>
-				<el-form-item :style='{"width":"48%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' class="input" v-if="type!='info'"  label="农户姓名" prop="nonghuxingming">
-					<el-input v-model="ruleForm.nonghuxingming" placeholder="农户姓名" clearable  :readonly="ro.nonghuxingming"></el-input>
+				<el-form-item :style='{"width":"48%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' class="input" v-if="type!='info'"  label="供应商姓名" prop="nonghuxingming">
+					<el-input v-model="ruleForm.nonghuxingming" placeholder="供应商姓名" clearable  :readonly="ro.nonghuxingming"></el-input>
 				</el-form-item>
-				<el-form-item :style='{"width":"48%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' v-else class="input" label="农户姓名" prop="nonghuxingming">
-					<el-input v-model="ruleForm.nonghuxingming" placeholder="农户姓名" readonly></el-input>
+				<el-form-item :style='{"width":"48%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' v-else class="input" label="供应商姓名" prop="nonghuxingming">
+					<el-input v-model="ruleForm.nonghuxingming" placeholder="供应商姓名" readonly></el-input>
 				</el-form-item>
 				<el-form-item :style='{"width":"48%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' class="input" v-if="type!='info'"  label="单限" prop="onelimittimes">
 					<el-input v-model.number="ruleForm.onelimittimes" placeholder="单限" clearable  :readonly="ro.onelimittimes"></el-input>

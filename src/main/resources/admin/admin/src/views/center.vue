@@ -8,11 +8,11 @@
       label-width="150px"
     >  
      <el-row>
-        <el-form-item :style='{"width":"48%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}'   v-if="flag=='nonghu'"  label="农户账号" prop="nonghuzhanghao">
-          <el-input v-model="ruleForm.nonghuzhanghao" readonly              placeholder="农户账号" clearable></el-input>
+        <el-form-item :style='{"width":"48%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}'   v-if="flag=='nonghu'"  label="供应商账号" prop="nonghuzhanghao">
+          <el-input v-model="ruleForm.nonghuzhanghao" readonly              placeholder="供应商账号" clearable></el-input>
         </el-form-item>
-        <el-form-item :style='{"width":"48%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}'   v-if="flag=='nonghu'"  label="农户姓名" prop="nonghuxingming">
-          <el-input v-model="ruleForm.nonghuxingming"               placeholder="农户姓名" clearable></el-input>
+        <el-form-item :style='{"width":"48%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}'   v-if="flag=='nonghu'"  label="供应商姓名" prop="nonghuxingming">
+          <el-input v-model="ruleForm.nonghuxingming"               placeholder="供应商姓名" clearable></el-input>
         </el-form-item>
         <el-form-item :style='{"width":"48%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' v-if="flag=='nonghu'"  label="性别" prop="xingbie">
           <el-select v-model="ruleForm.xingbie"  placeholder="请选择性别">
@@ -24,8 +24,8 @@
             </el-option>
           </el-select>
         </el-form-item>
-        <el-form-item :style='{"width":"48%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}'   v-if="flag=='nonghu'"  label="农户电话" prop="nonghudianhua">
-          <el-input v-model="ruleForm.nonghudianhua"               placeholder="农户电话" clearable></el-input>
+        <el-form-item :style='{"width":"48%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}'   v-if="flag=='nonghu'"  label="供应商电话" prop="nonghudianhua">
+          <el-input v-model="ruleForm.nonghudianhua"               placeholder="供应商电话" clearable></el-input>
         </el-form-item>
         <el-form-item :style='{"width":"48%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' v-if="flag=='nonghu'" label="头像" prop="touxiang">
           <file-upload
@@ -133,7 +133,7 @@ export default {
 	},
     onUpdateHandler() {
       if((!this.ruleForm.nonghuzhanghao)&& 'nonghu'==this.flag){
-        this.$message.error('农户账号不能为空');
+        this.$message.error('供应商账号不能为空');
         return
       }
 
@@ -145,7 +145,7 @@ export default {
 
 
       if((!this.ruleForm.nonghuxingming)&& 'nonghu'==this.flag){
-        this.$message.error('农户姓名不能为空');
+        this.$message.error('供应商姓名不能为空');
         return
       }
 
@@ -155,7 +155,7 @@ export default {
 
 
       if( 'nonghu' ==this.flag && this.ruleForm.nonghudianhua&&(!isMobile(this.ruleForm.nonghudianhua))){
-        this.$message.error(`农户电话应输入手机格式`);
+        this.$message.error(`供应商电话应输入手机格式`);
         return
       }
 
