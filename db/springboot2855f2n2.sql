@@ -654,3 +654,34 @@ UNLOCK TABLES;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2024-02-15 19:13:52
+-- ----------------------------
+-- Table structure for orders
+-- ----------------------------
+DROP TABLE IF EXISTS `orders`;
+CREATE TABLE `orders`  (
+                           `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键id',
+                           `orderid` varchar(200) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '订单编号',
+                           `tablename` varchar(200) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '商品表名',
+                           `userid` bigint(20) DEFAULT NULL COMMENT '用户id',
+                           `goodid` bigint(20) DEFAULT NULL COMMENT '商品id',
+                           `goodname` varchar(200) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '商品名称',
+                           `picture` longtext CHARACTER SET utf8 COLLATE utf8_general_ci COMMENT '商品图片',
+                           `buynumber` int(11) DEFAULT NULL COMMENT '购买数量',
+                           `price` double DEFAULT NULL COMMENT '价格',
+                           `total` double DEFAULT NULL COMMENT '总价格',
+                           `discountprice` double DEFAULT NULL COMMENT '折扣价格',
+                           `discounttotal` double DEFAULT NULL COMMENT '折扣总价格',
+                           `type` int(11) DEFAULT NULL COMMENT '支付类型',
+                           `status` varchar(200) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '状态',
+                           `address` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '地址',
+                           `tel` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '电话',
+                           `consignee` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '收货人',
+                           `logistics` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '物流',
+                           `remark` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '备注',
+                           `nonghuzhanghao` varchar(200) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '供应商账号',
+                           `sfsh` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '是否审核',
+                           `shhf` longtext CHARACTER SET utf8 COLLATE utf8_general_ci COMMENT '审核回复',
+                           `role` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '用户角色',
+                           `addtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+                           PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '订单' ROW_FORMAT = Dynamic;

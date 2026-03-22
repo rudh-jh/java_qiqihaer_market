@@ -65,3 +65,22 @@ cd /d E:\MYS\java_qiqihaer_market-main\src\main\resources\front\front
 npm run serve
 访问：
 http://localhost:8082/#/index/home
+
+默认测试账号
+后台管理员
+角色：管理员
+账号：admin
+密码：admin
+后台供应商
+角色：农商
+账号：农户账号2
+密码：123456
+
+或：
+
+角色：农商
+账号：222
+密码：222
+前台用户
+账号：111
+密码：111
