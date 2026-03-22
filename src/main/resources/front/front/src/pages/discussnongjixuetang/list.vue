@@ -97,7 +97,7 @@
         baseUrl: '',
         breadcrumbItem: [
           {
-            name: '农技学堂评论表'
+            name: '粮油知识评论表'
           }
         ],
         formSearch: {

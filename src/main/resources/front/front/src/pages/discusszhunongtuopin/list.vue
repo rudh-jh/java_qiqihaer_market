@@ -97,7 +97,7 @@
         baseUrl: '',
         breadcrumbItem: [
           {
-            name: '助农脱贫评论表'
+            name: '粮油专题评论表'
           }
         ],
         formSearch: {

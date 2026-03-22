@@ -66,11 +66,11 @@
 					<div  :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"24px","color":"#818181","flex":"1","height":"auto"}'>{{detail.guige}}</div>
 				</div>
 				<div class="item" :style='{"padding":"10px 0","margin":"0 0 10px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}'>
-					<div class="lable" :style='{"padding":"0 10px","color":"#818181","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"40px","height":"40px"}'>农户账号</div>
+					<div class="lable" :style='{"padding":"0 10px","color":"#818181","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"40px","height":"40px"}'>供应商账号</div>
 					<div  :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"24px","color":"#818181","flex":"1","height":"auto"}'>{{detail.nonghuzhanghao}}</div>
 				</div>
 				<div class="item" :style='{"padding":"10px 0","margin":"0 0 10px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}'>
-					<div class="lable" :style='{"padding":"0 10px","color":"#818181","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"40px","height":"40px"}'>农户姓名</div>
+					<div class="lable" :style='{"padding":"0 10px","color":"#818181","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"40px","height":"40px"}'>供应商姓名</div>
 					<div  :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"24px","color":"#818181","flex":"1","height":"auto"}'>{{detail.nonghuxingming}}</div>
 				</div>
 				<div class="item" :style='{"padding":"10px 0","margin":"0 0 10px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}'>
@@ -185,7 +185,7 @@
         baseUrl: '',
         breadcrumbItem: [
           {
-            name: '助农商品'
+            name: '粮油商品'
           }
         ],
         title: '',
@@ -606,7 +606,7 @@
 		},
 		// 删除
 		delClick(){
-			this.$confirm('是否删除此助农商品？')
+			this.$confirm('是否删除此粮油商品？')
 			  .then(_ => {
 			    this.$http.post('zhunongshangpin/delete', [this.detail.id]).then(res => {
 			      if (res.data.code == 0) {

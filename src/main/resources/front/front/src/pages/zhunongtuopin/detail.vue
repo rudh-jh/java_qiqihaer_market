@@ -139,7 +139,7 @@
         baseUrl: '',
         breadcrumbItem: [
           {
-            name: '助农脱贫'
+            name: '粮油专题'
           }
         ],
         title: '',
@@ -450,7 +450,7 @@
 		},
 		// 删除
 		delClick(){
-			this.$confirm('是否删除此助农脱贫？')
+			this.$confirm('是否删除此粮油专题？')
 			  .then(_ => {
 			    this.$http.post('zhunongtuopin/delete', [this.detail.id]).then(res => {
 			      if (res.data.code == 0) {

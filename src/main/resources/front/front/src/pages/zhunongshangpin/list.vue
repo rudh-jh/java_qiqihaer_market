@@ -132,7 +132,7 @@
         baseUrl: '',
         breadcrumbItem: [
           {
-            name: '助农商品'
+            name: '粮油商品'
           }
         ],
         formSearch: {

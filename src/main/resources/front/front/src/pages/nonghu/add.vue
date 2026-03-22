@@ -8,17 +8,17 @@
       :rules="rules"
       label-width="100px"
     >
-          <el-form-item :style='{"padding":"10px","margin":"0 0 10px","background":"none"}' label="农户账号" prop="nonghuzhanghao">
+          <el-form-item :style='{"padding":"10px","margin":"0 0 10px","background":"none"}' label="供应商账号" prop="nonghuzhanghao">
             <el-input v-model="ruleForm.nonghuzhanghao" 
-                placeholder="农户账号" clearable :disabled=" false  ||ro.nonghuzhanghao"></el-input>
+                placeholder="供应商账号" clearable :disabled=" false  ||ro.nonghuzhanghao"></el-input>
           </el-form-item>
           <el-form-item :style='{"padding":"10px","margin":"0 0 10px","background":"none"}' label="密码" prop="mima">
             <el-input v-model="ruleForm.mima" 
                 placeholder="密码" clearable :disabled=" false  ||ro.mima"></el-input>
           </el-form-item>
-          <el-form-item :style='{"padding":"10px","margin":"0 0 10px","background":"none"}' label="农户姓名" prop="nonghuxingming">
+          <el-form-item :style='{"padding":"10px","margin":"0 0 10px","background":"none"}' label="供应商姓名" prop="nonghuxingming">
             <el-input v-model="ruleForm.nonghuxingming" 
-                placeholder="农户姓名" clearable :disabled=" false  ||ro.nonghuxingming"></el-input>
+                placeholder="供应商姓名" clearable :disabled=" false  ||ro.nonghuxingming"></el-input>
           </el-form-item>
           <el-form-item :style='{"padding":"10px","margin":"0 0 10px","background":"none"}'  label="性别" prop="xingbie">
             <el-select v-model="ruleForm.xingbie" placeholder="请选择性别" :disabled=" false  ||ro.xingbie" >
@@ -30,9 +30,9 @@
               </el-option>
             </el-select>
           </el-form-item>
-          <el-form-item :style='{"padding":"10px","margin":"0 0 10px","background":"none"}' label="农户电话" prop="nonghudianhua">
+          <el-form-item :style='{"padding":"10px","margin":"0 0 10px","background":"none"}' label="供应商电话" prop="nonghudianhua">
             <el-input v-model="ruleForm.nonghudianhua" 
-                placeholder="农户电话" clearable :disabled=" false  ||ro.nonghudianhua"></el-input>
+                placeholder="供应商电话" clearable :disabled=" false  ||ro.nonghudianhua"></el-input>
           </el-form-item>
           <el-form-item :style='{"padding":"10px","margin":"0 0 10px","background":"none"}' label="头像" v-if="type!='cross' || (type=='cross' && !ro.touxiang)" prop="touxiang">
             <file-upload
@@ -89,13 +89,13 @@
 
         rules: {
           nonghuzhanghao: [
-            { required: true, message: '农户账号不能为空', trigger: 'blur' },
+            { required: true, message: '供应商账号不能为空', trigger: 'blur' },
           ],
           mima: [
             { required: true, message: '密码不能为空', trigger: 'blur' },
           ],
           nonghuxingming: [
-            { required: true, message: '农户姓名不能为空', trigger: 'blur' },
+            { required: true, message: '供应商姓名不能为空', trigger: 'blur' },
           ],
           xingbie: [
           ],

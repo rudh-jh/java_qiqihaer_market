@@ -131,7 +131,7 @@
         baseUrl: '',
         breadcrumbItem: [
           {
-            name: '农技学堂评论表'
+            name: '粮油知识评论表'
           }
         ],
         title: '',
@@ -377,7 +377,7 @@
 		},
 		// 删除
 		delClick(){
-			this.$confirm('是否删除此农技学堂评论表？')
+			this.$confirm('是否删除此粮油知识评论表？')
 			  .then(_ => {
 			    this.$http.post('discussnongjixuetang/delete', [this.detail.id]).then(res => {
 			      if (res.data.code == 0) {

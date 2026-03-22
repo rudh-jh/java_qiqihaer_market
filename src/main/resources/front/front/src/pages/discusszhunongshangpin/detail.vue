@@ -131,7 +131,7 @@
         baseUrl: '',
         breadcrumbItem: [
           {
-            name: '助农商品评论表'
+            name: '粮油商品评论表'
           }
         ],
         title: '',
@@ -377,7 +377,7 @@
 		},
 		// 删除
 		delClick(){
-			this.$confirm('是否删除此助农商品评论表？')
+			this.$confirm('是否删除此粮油商品评论表？')
 			  .then(_ => {
 			    this.$http.post('discusszhunongshangpin/delete', [this.detail.id]).then(res => {
 			      if (res.data.code == 0) {

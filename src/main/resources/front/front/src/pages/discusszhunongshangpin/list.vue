@@ -97,7 +97,7 @@
         baseUrl: '',
         breadcrumbItem: [
           {
-            name: '助农商品评论表'
+            name: '粮油商品评论表'
           }
         ],
         formSearch: {
