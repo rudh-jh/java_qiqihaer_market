@@ -228,9 +228,12 @@ public class ZhunongshangpinController {
 				newMap.put(pre + "." + newKey, entry.getValue());
 			}
 		}
-		params.put("sort", "clicknum");
-        params.put("order", "desc");
-		PageUtils page = zhunongshangpinService.queryPage(params, MPUtil.sort(MPUtil.between(MPUtil.likeOrEq(ew, zhunongshangpin), params), params));
+
+        ew.orderBy("salenum", false);
+        ew.orderBy("likenum", false);
+        ew.orderBy("goodcommentnum", false);
+
+        PageUtils page = zhunongshangpinService.queryPage(params, ew);
         return R.ok().put("data", page);
     }
 

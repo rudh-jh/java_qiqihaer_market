@@ -80,6 +80,19 @@
 				<el-form-item :style='{"width":"48%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' v-else class="input" label="规格" prop="guige">
 					<el-input v-model="ruleForm.guige" placeholder="规格" readonly></el-input>
 				</el-form-item>
+        <el-form-item :style='{"width":"48%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' class="input" v-if="type!='info'" label="供货时间" prop="gonghuoshijian">
+          <el-input v-model="ruleForm.gonghuoshijian" placeholder="例如：每周一、三、五供货" clearable></el-input>
+        </el-form-item>
+        <el-form-item :style='{"width":"48%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' v-else class="input" label="供货时间" prop="gonghuoshijian">
+          <el-input v-model="ruleForm.gonghuoshijian" placeholder="供货时间" readonly></el-input>
+        </el-form-item>
+
+        <el-form-item :style='{"width":"48%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' class="input" v-if="type!='info'" label="供货数量" prop="gonghuoshuliang">
+          <el-input-number v-model="ruleForm.gonghuoshuliang" :min="0" placeholder="请输入供货数量"></el-input-number>
+        </el-form-item>
+        <el-form-item :style='{"width":"48%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' v-else class="input" label="供货数量" prop="gonghuoshuliang">
+          <el-input v-model="ruleForm.gonghuoshuliang" placeholder="供货数量" readonly></el-input>
+        </el-form-item>
 				<el-form-item :style='{"width":"48%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' class="input" v-if="type!='info'"  label="供应商账号" prop="nonghuzhanghao">
 					<el-input v-model="ruleForm.nonghuzhanghao" placeholder="供应商账号" clearable  :readonly="ro.nonghuzhanghao"></el-input>
 				</el-form-item>
@@ -253,6 +266,8 @@ export default {
 				baozhiqi: '',
 				shengchandi: '',
 				guige: '',
+        gonghuoshijian: '',
+        gonghuoshuliang: 0,
 				chanpinxiangqing: '',
 				nonghuzhanghao: '',
 				nonghuxingming: '',

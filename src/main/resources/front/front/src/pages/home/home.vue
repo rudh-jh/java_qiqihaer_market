@@ -184,29 +184,37 @@
 		<div class="box10" :style='{"width":"20%","background":"#fff","display":"none","height":"80px"}'></div>
 	</div>
 	
-    <div class="title" :style='{"width":"200px","margin":"100px 0 20px","lineHeight":"1","textAlign":"left","background":"none"}'>
-		<span :style='{"color":"#71509E","fontSize":"32px"}'>粮油商品推荐</span>
+    <div class="title" :style='{"width":"260px","margin":"100px 0 20px","lineHeight":"1","textAlign":"left","background":"none"}'>
+		<span :style='{"color":"#0B1F3A","fontSize":"34px","fontWeight":"800"}'>粮油商品推荐</span>
 	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
 	<div v-if="zhunongshangpinRecommend.length" class="list list10 index-pv1 list10zhunongshangpin" :style='{"width":"100%","padding":"10px","background":"none","height":"auto"}'>
 	  <div :style='{"width":"100%","background":"none","height":"600px"}'>
 	    <div class="swiper-container recommendSwiper10 recommend-list-10zhunongshangpin">
 	      <div class="swiper-wrapper">
-	        <div class="swiper-slide" v-for="item,index in zhunongshangpinRecommend" :key="index">
-	          <div class="list-item animation-box" :style='{"width":"100%","position":"relative","height":"auto"}' @click="toDetail('zhunongshangpinDetail', item)">
-				<img :name="item.id" :style='{"border":"1px solid #d8cbeb","width":"100%","objectFit":"contain","background":"rgba(255,255,255,.3)","display":"block","height":"248px"}' v-if="preHttp(item.tupian)" :src="item.tupian.split(',')[0]" alt="" />
-				<img :name="item.id" :style='{"border":"1px solid #d8cbeb","width":"100%","objectFit":"contain","background":"rgba(255,255,255,.3)","display":"block","height":"248px"}' v-else :src="baseUrl + (item.tupian?item.tupian.split(',')[0]:'')" alt="" />
-				<div class="line1" :style='{"padding":"0 10px","lineHeight":"2","fontSize":"18px","color":"#000"}'>{{item.chanpinmingcheng}}</div>
+	        <div class="swiper-slide" v-for="(item,index) in zhunongshangpinRecommend" :key="index">
+	          <div class="list-item animation-box recommend-goods-card" @click="toDetail('zhunongshangpinDetail', item)">
+				<img
+					:name="item.id"
+					class="recommend-goods-img"
+					v-if="preHttp(item.tupian)"
+					:src="item.tupian.split(',')[0]"
+					alt=""
+				/>
+				<img
+					:name="item.id"
+					class="recommend-goods-img"
+					v-else
+					:src="baseUrl + (item.tupian ? item.tupian.split(',')[0] : '')"
+					alt=""
+				/>
+				<div class="recommend-goods-name">{{ item.chanpinmingcheng }}</div>
+				<div class="recommend-goods-price">￥{{ item.price }}</div>
+				<div class="recommend-goods-stats">
+					<span>销量：{{ item.salenum || 0 }}</span>
+					<span>点赞：{{ item.likenum || 0 }}</span>
+					<span>好评：{{ item.goodcommentnum || 0 }}</span>
+				</div>
 	          </div>
 	        </div>
 	      </div>
@@ -214,12 +222,6 @@
 	  </div>
 	</div>
 
-
-
-
-
-
-	
 	<div @click="moreBtn('zhunongshangpin')" :style='{"border":"0","margin":"10px auto","top":"100px","textAlign":"center","background":"none","display":"block","width":"80px","lineHeight":"32px","position":"absolute","right":"10%"}'>
 		<span :style='{"color":"#858585","fontSize":"14px"}'>MORE</span>
 		<i :style='{"color":"#858585","fontSize":"14px"}' class="icon iconfont icon-gengduo1"></i>
@@ -458,12 +460,9 @@ import Swiper from "swiper";
 			});
 		},
 		getList() {
-			let autoSortUrl = "";
+			// 首页推荐固定使用销量、点赞量、好评数排序接口，避免登录后切换到 autoSort2 导致推荐数量异常。
+			let autoSortUrl = "zhunongshangpin/autoSort";
 			let data = {}
-          autoSortUrl = "zhunongshangpin/autoSort";
-          if(localStorage.getItem('frontToken')) {
-              autoSortUrl = "zhunongshangpin/autoSort2";
-          }
 			data = {
 				page: 1,
 				limit: 6,
@@ -471,15 +470,15 @@ import Swiper from "swiper";
 			if(this.recommendIndex10zhunongshangpin != 0){
 				data.chanpinfenlei = this.recommendList10zhunongshangpin[this.recommendIndex10zhunongshangpin - 1].chanpinfenlei
 			}
-			this.$http.get(autoSortUrl, {params: data}).then(res => {
-				if (res.data.code == 0) {
-					this.zhunongshangpinRecommend = res.data.data.list;
-					
-					
-					// 商品列表样式五
-					
-				}
-			});
+      this.$http.get(autoSortUrl, {params: data}).then(res => {
+        if (res.data.code == 0) {
+          this.zhunongshangpinRecommend = res.data.data.list;
+
+          this.$nextTick(() => {
+            this.swiperChanges();
+          });
+        }
+      });
 			
 			data = {
 				page: 1,
@@ -1026,5 +1025,68 @@ import Swiper from "swiper";
 
 
 
+
+	/* 首页粮油商品推荐：保留原 Swiper 展示方式，只增强商品信息展示 */
+	.recommend-goods-card {
+		width: 100%;
+		position: relative;
+		height: auto;
+		background: rgba(255, 255, 255, 0.78);
+		border: 1px solid #d8cbeb;
+		border-radius: 8px;
+		padding: 10px 10px 12px;
+		box-sizing: border-box;
+		cursor: pointer;
+		overflow: hidden;
+		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+	}
+
+	.recommend-goods-img {
+		width: 100%;
+		height: 210px;
+		object-fit: contain;
+		background: rgba(255, 255, 255, 0.6);
+		display: block;
+		border-radius: 6px;
+	}
+
+	.recommend-goods-name {
+		padding: 8px 6px 0;
+		line-height: 28px;
+		font-size: 18px;
+		color: #0B1F3A;
+		font-weight: 800;
+		text-align: center;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	.recommend-goods-price {
+		margin-top: 2px;
+		text-align: center;
+		color: #c00000;
+		font-size: 18px;
+		font-weight: 800;
+		line-height: 26px;
+	}
+
+	.recommend-goods-stats {
+		margin-top: 4px;
+		display: flex;
+		justify-content: center;
+		gap: 8px;
+		color: #333;
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 24px;
+		flex-wrap: wrap;
+	}
+
+	.recommend-goods-stats span {
+		background: #f3edf9;
+		border-radius: 12px;
+		padding: 2px 8px;
+	}
 
 </style>

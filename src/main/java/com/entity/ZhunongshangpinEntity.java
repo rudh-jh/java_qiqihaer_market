@@ -168,6 +168,21 @@ public class ZhunongshangpinEntity<T> implements Serializable {
 	 */
 					
 	private Integer storeupnum;
+	/** 销量 */
+	private Integer salenum;
+
+	/** 点赞量 */
+	private Integer likenum;
+
+	/** 好评数 */
+	private Integer goodcommentnum;
+
+	/** 供货时间 */
+	private String gonghuoshijian;
+
+	/** 供货数量 */
+	private Integer gonghuoshuliang;
+
 	
 	
 	@JsonFormat(locale="zh", timezone="GMT+8", pattern="yyyy-MM-dd HH:mm:ss")
@@ -415,6 +430,76 @@ public class ZhunongshangpinEntity<T> implements Serializable {
 	 */
 	public Integer getStoreupnum() {
 		return storeupnum;
+	}
+
+	/**
+	 * 设置：销量
+	 */
+	public void setSalenum(Integer salenum) {
+		this.salenum = salenum;
+	}
+
+	/**
+	 * 获取：销量
+	 */
+	public Integer getSalenum() {
+		return salenum;
+	}
+
+	/**
+	 * 设置：点赞量
+	 */
+	public void setLikenum(Integer likenum) {
+		this.likenum = likenum;
+	}
+
+	/**
+	 * 获取：点赞量
+	 */
+	public Integer getLikenum() {
+		return likenum;
+	}
+
+	/**
+	 * 设置：好评数
+	 */
+	public void setGoodcommentnum(Integer goodcommentnum) {
+		this.goodcommentnum = goodcommentnum;
+	}
+
+	/**
+	 * 获取：好评数
+	 */
+	public Integer getGoodcommentnum() {
+		return goodcommentnum;
+	}
+
+	/**
+	 * 设置：供货时间
+	 */
+	public void setGonghuoshijian(String gonghuoshijian) {
+		this.gonghuoshijian = gonghuoshijian;
+	}
+
+	/**
+	 * 获取：供货时间
+	 */
+	public String getGonghuoshijian() {
+		return gonghuoshijian;
+	}
+
+	/**
+	 * 设置：供货数量
+	 */
+	public void setGonghuoshuliang(Integer gonghuoshuliang) {
+		this.gonghuoshuliang = gonghuoshuliang;
+	}
+
+	/**
+	 * 获取：供货数量
+	 */
+	public Integer getGonghuoshuliang() {
+		return gonghuoshuliang;
 	}
 
 }
