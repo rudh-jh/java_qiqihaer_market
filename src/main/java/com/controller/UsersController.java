@@ -66,7 +66,14 @@ public class UsersController{
 	@PostMapping(value = "/register")
 	public R register(@RequestBody UsersEntity user){
 //    	ValidatorUtils.validateEntity(user);
-    	if(userService.selectOne(new EntityWrapper<UsersEntity>().eq("username", user.getUsername())) !=null) {
+		if(user.getUsername() == null || user.getUsername().length() < 6) {
+			return R.error("用户名至少6位");
+		}
+		if(user.getPassword() == null || user.getPassword().length() < 6) {
+			return R.error("密码至少6位");
+		}
+
+		if(userService.selectOne(new EntityWrapper<UsersEntity>().eq("username", user.getUsername())) !=null) {
     		return R.error("用户已存在");
     	}
         userService.insert(user);

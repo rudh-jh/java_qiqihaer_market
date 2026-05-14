@@ -50,8 +50,8 @@
 				<div class="item-info" :style='{"padding":"10px","overflow":"hidden","alignItems":"center","flexWrap":"wrap","flex":"1","display":"flex","height":"auto"}'>
 					<div v-if="item.price" :style='{"width":"50%","padding":"0 0","lineHeight":"1","fontSize":"14px","color":"red","order":"2"}' class="price"><span :style='{"fontSize":"12px"}'>￥</span>{{item.price}}</div>
 					<div :style='{"width":"50%","padding":"0 10px 0 0","order":"7"}'>
-					  <span class="icon iconfont icon-shijian21" :style='{"margin":"0 2px 0 0","lineHeight":"1.5","fontSize":"12px","color":"#666"}'></span>
-					  <span :style='{"color":"#666","lineHeight":"1.5","fontSize":"12px"}'>{{item.addtime}}</span>
+					  <span class="icon iconfont icon-shijian21" :style='{"margin":"0 2px 0 0","lineHeight":"1.5","fontSize":"12px","color":"#222","fontWeight":"600"}'></span>
+					  <span :style='{"color":"#222","fontWeight":"600","lineHeight":"1.5","fontSize":"12px"}'>{{item.addtime}}</span>
 					</div>
 				</div>
 			</div>

@@ -105,4 +105,18 @@ export default {
   .ql-snow .ql-picker.ql-font .ql-picker-item[data-value="monospace"]::before {
     content: "等宽字体";
   }
+body {
+  color: #111;
+  font-weight: 500;
+}
+
+.el-menu-item,
+.el-breadcrumb__inner,
+.el-tabs__item,
+.el-form-item__label,
+.el-table,
+.el-input__inner {
+color: #111 !important;
+font-weight: 600 !important;
+}
 </style>

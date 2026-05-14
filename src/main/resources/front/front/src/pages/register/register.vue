@@ -7,7 +7,7 @@
 			<div v-if="true" :style='{"margin":"0 0 20px 0","color":"#A293B6","textAlign":"center","width":"100%","lineHeight":"44px","fontSize":"30px","textShadow":"none","fontWeight":"bold"}'>粮油产品线上销售平台注册</p></div>
 			<el-form-item :style='{"width":"100%","padding":"0","margin":"0 auto 15px","height":"auto"}' v-if="tableName=='nonghu'" prop="nonghuzhanghao">
 				<div v-if="true" :style='{"width":"94px","lineHeight":"44px","fontSize":"14px","color":"#000"}' :class="changeRules('nonghuzhanghao')?'required':''">供应商账号：</div>
-				<el-input v-model="registerForm.nonghuzhanghao"  placeholder="请输入供应商账号" />
+				<el-input v-model="registerForm.nonghuzhanghao"  placeholder="请输入6位以上供应商账号" />
 			</el-form-item>
 			<el-form-item :style='{"width":"100%","padding":"0","margin":"0 auto 15px","height":"auto"}' v-if="tableName=='nonghu'" prop="mima">
 				<div v-if="true" :style='{"width":"94px","lineHeight":"44px","fontSize":"14px","color":"#000"}' :class="changeRules('mima')?'required':''">密码：</div>
@@ -49,11 +49,11 @@
 			</el-form-item>
 			<el-form-item :style='{"width":"100%","padding":"0","margin":"0 auto 15px","height":"auto"}' v-if="tableName=='yonghu'" prop="yonghuzhanghao">
 				<div v-if="true" :style='{"width":"94px","lineHeight":"44px","fontSize":"14px","color":"#000"}' :class="changeRules('yonghuzhanghao')?'required':''">用户账号：</div>
-				<el-input v-model="registerForm.yonghuzhanghao"  placeholder="请输入用户账号" />
+				<el-input v-model="registerForm.yonghuzhanghao"  placeholder="请输入6位以上用户账号" />
 			</el-form-item>
 			<el-form-item :style='{"width":"100%","padding":"0","margin":"0 auto 15px","height":"auto"}' v-if="tableName=='yonghu'" prop="mima">
 				<div v-if="true" :style='{"width":"94px","lineHeight":"44px","fontSize":"14px","color":"#000"}' :class="changeRules('mima')?'required':''">密码：</div>
-				<el-input v-model="registerForm.mima" type="password" placeholder="请输入密码" />
+				<el-input v-model="registerForm.mima" type="password" placeholder="请输入6位以上密码" />
 			</el-form-item>
 			<el-form-item :style='{"width":"100%","padding":"0","margin":"0 auto 15px","height":"auto"}' v-if="tableName=='yonghu'" prop="mima2">
 				<div v-if="true" :style='{"width":"94px","lineHeight":"44px","fontSize":"14px","color":"#000"}' :class="changeRules('mima')?'required':''">确认密码：</div>
@@ -229,7 +229,19 @@ export default {
         this.$refs[formName].validate((valid) => {
           if (valid) {
             var url=this.tableName+"/register";
-				if((!this.registerForm.nonghuzhanghao) && `nonghu` == this.tableName){
+            if (`nonghu` == this.tableName && (!this.registerForm.nonghuzhanghao || this.registerForm.nonghuzhanghao.length < 6)) {
+              this.$message.error(`供应商账号至少6位`);
+              return
+            }
+            if (`yonghu` == this.tableName && (!this.registerForm.yonghuzhanghao || this.registerForm.yonghuzhanghao.length < 6)) {
+              this.$message.error(`用户账号至少6位`);
+              return
+            }
+            if (!this.registerForm.mima || this.registerForm.mima.length < 6) {
+              this.$message.error(`密码至少6位`);
+              return
+            }
+            if((!this.registerForm.nonghuzhanghao) && `nonghu` == this.tableName){
 					this.$message.error(`供应商账号不能为空`);
 					return
 				}

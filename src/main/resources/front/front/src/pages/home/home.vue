@@ -6,7 +6,7 @@
 		<!-- 关于我们 -->
 		<div id="about" class="animate__animated" :style='{"padding":"30px 30px 30px 10%","boxShadow":"0 1px 6px rgba(255, 255, 255, .3)","margin":"0 0 0","display":"flex","flexWrap":"wrap","background":"url(http://codegen.caihongy.cn/20231125/447e503c74a84f1aa12e161d0010c879.png)","width":"50%","backgroundSize":"cover","backgroundPosition":"left center","position":"relative","backgroundRepeat":"no-repeat","height":"auto","order":"2"}'>
 		  <div :style='{"margin":"0 0 20px","color":"#fff","textAlign":"left","width":"100%","lineHeight":"1.5","fontSize":"30px","order":"1"}'>{{aboutUsDetail.title}}</div>
-		  <div :style='{"margin":"0 0 10px","color":"#999","textAlign":"center","display":"none","width":"100%","lineHeight":"1.5","fontSize":"20px"}'>{{aboutUsDetail.subtitle}}</div>
+		  <div :style='{"margin":"0 0 10px", "color":"#222","fontWeight":"600","textAlign":"center","display":"none","width":"100%","lineHeight":"1.5","fontSize":"20px"}'>{{aboutUsDetail.subtitle}}</div>
 		  <div :style='{"padding":"0 10px 20px","margin":"0","flexWrap":"wrap","background":"#fff","display":"flex","width":"100%","height":"auto","order":"3"}'>
 		    <img :style='{"margin":"0 10px","objectFit":"cover","flex":1,"display":"block","height":"160px"}' :src="baseUrl + aboutUsDetail.picture1">
 		    <img :style='{"margin":"0 10px","objectFit":"cover","flex":1,"display":"block","height":"160px"}' :src="baseUrl + aboutUsDetail.picture2">
@@ -27,7 +27,7 @@
 		<!-- 系统简介 -->
 		<div id="system" class="animate__animated" :style='{"padding":"30px 10% 30px 30px","boxShadow":"none","margin":"0 0 0","display":"flex","flexWrap":"wrap","background":"url(http://codegen.caihongy.cn/20231125/447e503c74a84f1aa12e161d0010c879.png)","width":"50%","backgroundSize":"cover","backgroundPosition":"right center","position":"relative","backgroundRepeat":"no-repeat","height":"auto","order":"3"}'>
 		  <div :style='{"margin":"0 0 20px","color":"#fff","textAlign":"left","width":"100%","lineHeight":"1.5","fontSize":"30px","order":"1"}'>{{systemIntroductionDetail.title}}</div>
-		  <div :style='{"margin":"0 0 10px","color":"#999","textAlign":"center","display":"none","width":"100%","lineHeight":"1.5","fontSize":"20px"}'>{{systemIntroductionDetail.subtitle}}</div>
+		  <div :style='{"margin":"0 0 10px", "color":"#222","fontWeight":"600","textAlign":"center","display":"none","width":"100%","lineHeight":"1.5","fontSize":"20px"}'>{{systemIntroductionDetail.subtitle}}</div>
 		  <div :style='{"padding":"30px 10px","margin":"0","background":"#fff","flexDirection":"column","display":"flex","width":"45%","justifyContent":"space-between","height":"400px","order":"3"}'>
 		    <img :style='{"width":"100%","margin":"0","objectFit":"cover","display":"block","height":"160px"}' :src="baseUrl + systemIntroductionDetail.picture1">
 		    <img :style='{"width":"100%","margin":"0","objectFit":"cover","display":"block","height":"160px"}' :src="baseUrl + systemIntroductionDetail.picture2">
@@ -101,24 +101,24 @@
 		      <div :style='{"padding":"0 0","whiteSpace":"nowrap","overflow":"hidden","color":"#000","width":"100%","lineHeight":"2","fontSize":"16px","textOverflow":"ellipsis","fontWeight":"bold","order":"2"}' class="name">{{newsList[0].title}}</div>
 		      <div :style='{"padding":"0 0 0","whiteSpace":"nowrap","overflow":"hidden","color":"#000","width":"100%","lineHeight":"1.5","fontSize":"14px","textOverflow":"ellipsis","order":"3"}' class="desc">{{newsList[0].introduction}}</div>
 		      <div :style='{"padding":"0 0","order":"8"}'>
-		        <span class="icon iconfont icon-shijian21" :style='{"margin":"0 2px 0 0","lineHeight":"1.5","fontSize":"12px","color":"#666"}'></span>
-		        <span :style='{"color":"#666","lineHeight":"1.5","fontSize":"12px"}'>{{newsList[0].addtime}}</span>
+		        <span class="icon iconfont icon-shijian21" :style='{"margin":"0 2px 0 0","lineHeight":"1.5","fontSize":"12px","color":"#222","fontWeight":"600"}'></span>
+		        <span :style='{"color":"#222","fontWeight":"600","lineHeight":"1.5","fontSize":"12px"}'>{{newsList[0].addtime}}</span>
 		      </div>
 		      <div :style='{"width":"100%","padding":"8px 0","order":"7"}'>
-		        <span class="icon iconfont icon-geren16" :style='{"margin":"0 2px 0 0","lineHeight":"1.5","fontSize":"12px","color":"#666"}'></span>
-		        <span :style='{"color":"#666","lineHeight":"1.5","fontSize":"12px"}'>{{newsList[0].name}}</span>
+		        <span class="icon iconfont icon-geren16" :style='{"margin":"0 2px 0 0","lineHeight":"1.5","fontSize":"12px","color":"#222","fontWeight":"600"}'></span>
+		        <span :style='{"color":"#222","fontWeight":"600","lineHeight":"1.5","fontSize":"12px"}'>{{newsList[0].name}}</span>
 		      </div>
 		      <div :style='{"padding":"8px 10px 0 0","order":"4"}'>
-		        <span class="icon iconfont icon-zan10" :style='{"margin":"0 2px 0 0","lineHeight":"1.5","fontSize":"12px","color":"#666"}'></span>
-		        <span :style='{"color":"#666","lineHeight":"1.5","fontSize":"12px"}'>{{newsList[0].thumbsupnum}}</span>
+		        <span class="icon iconfont icon-zan10" :style='{"margin":"0 2px 0 0","lineHeight":"1.5","fontSize":"12px","color":"#222","fontWeight":"600"}'></span>
+		        <span :style='{"color":"#222","fontWeight":"600","lineHeight":"1.5","fontSize":"12px"}'>{{newsList[0].thumbsupnum}}</span>
 		      </div>
 		      <div :style='{"padding":"8px 10px 0","order":"5"}'>
-		        <span class="icon iconfont icon-shoucang10" :style='{"margin":"0 2px 0 0","lineHeight":"1.5","fontSize":"12px","color":"#666"}'></span>
-		        <span :style='{"color":"#666","lineHeight":"1.5","fontSize":"12px"}'>{{newsList[0].storeupnum}}</span>
+		        <span class="icon iconfont icon-shoucang10" :style='{"margin":"0 2px 0 0","lineHeight":"1.5","fontSize":"12px","color":"#222","fontWeight":"600"}'></span>
+		        <span :style='{"color":"#222","fontWeight":"600","lineHeight":"1.5","fontSize":"12px"}'>{{newsList[0].storeupnum}}</span>
 		      </div>
 		      <div :style='{"padding":"8px 10px 0","order":"6"}'>
-		        <span class="icon iconfont icon-chakan9" :style='{"margin":"0 2px 0 0","lineHeight":"1.5","fontSize":"12px","color":"#666"}'></span>
-		        <span :style='{"color":"#666","lineHeight":"1.5","fontSize":"12px"}'>{{newsList[0].clicknum}}</span>
+		        <span class="icon iconfont icon-chakan9" :style='{"margin":"0 2px 0 0","lineHeight":"1.5","fontSize":"12px","color":"#222","fontWeight":"600"}'></span>
+		        <span :style='{"color":"#222","fontWeight":"600","lineHeight":"1.5","fontSize":"12px"}'>{{newsList[0].clicknum}}</span>
 		      </div>
 		    </div>
 		    <div v-if="newsList.length > 1" class="right" :style='{"width":"calc(100% - 380px)","flexWrap":"wrap","flexDirection":"column","justifyContent":"space-between","display":"flex","height":"100%"}'>
@@ -161,8 +161,8 @@
 
 
 		<div @click="moreBtn('news')" :style='{"border":"0","margin":"0 auto","top":"138px","textAlign":"center","background":"none","display":"block","width":"auto","lineHeight":"1","position":"absolute","right":"10%"}'>
-			<span :style='{"color":"#858585","fontSize":"16px"}'>更多</span>
-			<i :style='{"color":"#858585","fontSize":"16px"}' class="icon iconfont icon-gengduo1"></i>
+			<span :style='{"color":"#222","fontWeight":"600","fontSize":"16px"}'>更多</span>
+			<i :style='{"color":"#222","fontWeight":"600","fontSize":"16px"}' class="icon iconfont icon-gengduo1"></i>
 		</div>
 		
 		</div>
@@ -184,12 +184,12 @@
 		<div class="box10" :style='{"width":"20%","background":"#fff","display":"none","height":"80px"}'></div>
 	</div>
 	
-    <div class="title" :style='{"width":"260px","margin":"100px 0 20px","lineHeight":"1","textAlign":"left","background":"none"}'>
+    <div class="title" :style='{"width":"260px","margin":"20px 0 16px","lineHeight":"1","textAlign":"left","background":"none"}'>
 		<span :style='{"color":"#0B1F3A","fontSize":"34px","fontWeight":"800"}'>粮油商品推荐</span>
 	</div>
 
 	<div v-if="zhunongshangpinRecommend.length" class="list list10 index-pv1 list10zhunongshangpin" :style='{"width":"100%","padding":"10px","background":"none","height":"auto"}'>
-	  <div :style='{"width":"100%","background":"none","height":"600px"}'>
+	  <div :style='{"width":"100%","background":"none","height":"360px"}'>
 	    <div class="swiper-container recommendSwiper10 recommend-list-10zhunongshangpin">
 	      <div class="swiper-wrapper">
 	        <div class="swiper-slide" v-for="(item,index) in zhunongshangpinRecommend" :key="index">
@@ -223,8 +223,8 @@
 	</div>
 
 	<div @click="moreBtn('zhunongshangpin')" :style='{"border":"0","margin":"10px auto","top":"100px","textAlign":"center","background":"none","display":"block","width":"80px","lineHeight":"32px","position":"absolute","right":"10%"}'>
-		<span :style='{"color":"#858585","fontSize":"14px"}'>MORE</span>
-		<i :style='{"color":"#858585","fontSize":"14px"}' class="icon iconfont icon-gengduo1"></i>
+		<span :style='{"color":"#222","fontWeight":"600","fontSize":"14px"}'>MORE</span>
+		<i :style='{"color":"#222","fontWeight":"600","fontSize":"14px"}' class="icon iconfont icon-gengduo1"></i>
 	</div>
 	
 </div>
@@ -291,8 +291,8 @@
 	
 	
 	<div @click="moreBtn('zhunongtuopin')" :style='{"border":"0","margin":"10px auto","top":"30px","textAlign":"center","background":"none","display":"block","width":"80px","lineHeight":"32px","position":"absolute","right":"0"}'>
-		<span :style='{"color":"#858585","fontSize":"16px"}'>更多</span>
-		<i :style='{"color":"#858585","fontSize":"16px"}' class="icon iconfont icon-gengduo1"></i>
+		<span :style='{"color":"#222","fontWeight":"600","fontSize":"16px"}'>更多</span>
+		<i :style='{"color":"#222","fontWeight":"600","fontSize":"16px"}' class="icon iconfont icon-gengduo1"></i>
 	</div>
 	
 
@@ -358,7 +358,7 @@ import Swiper from "swiper";
 		swiperChanges() {
 			if (this['recommendListSwiper10zhunongshangpin']) this['recommendListSwiper10zhunongshangpin'].destroy()
 			setTimeout(()=>{
-				this['recommendListSwiper10zhunongshangpin'] = new Swiper(".recommend-list-10zhunongshangpin", {"freeMode":true,"slidesPerView":3,"slidesPerColumn":2,"spaceBetween":30})
+        this['recommendListSwiper10zhunongshangpin'] = new Swiper(".recommend-list-10zhunongshangpin", {"freeMode":true,"slidesPerView":4,"slidesPerColumn":1,"spaceBetween":24})
 			},750)
 		},
 		newsIndexClick15(index) {
@@ -1043,7 +1043,7 @@ import Swiper from "swiper";
 
 	.recommend-goods-img {
 		width: 100%;
-		height: 210px;
+		height: 160px;
 		object-fit: contain;
 		background: rgba(255, 255, 255, 0.6);
 		display: block;
@@ -1052,8 +1052,8 @@ import Swiper from "swiper";
 
 	.recommend-goods-name {
 		padding: 8px 6px 0;
-		line-height: 28px;
-		font-size: 18px;
+		line-height: 24px;
+		font-size: 16px;
 		color: #0B1F3A;
 		font-weight: 800;
 		text-align: center;
@@ -1066,9 +1066,9 @@ import Swiper from "swiper";
 		margin-top: 2px;
 		text-align: center;
 		color: #c00000;
-		font-size: 18px;
+		font-size: 16px;
 		font-weight: 800;
-		line-height: 26px;
+		line-height: 24px;
 	}
 
 	.recommend-goods-stats {

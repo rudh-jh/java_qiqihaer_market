@@ -10,96 +10,96 @@
 	<div :style='{"width":"100%","padding":"30px 10%","margin":"0 auto","borderRadius":"0","background":"#A293B6"}'>
 		<el-button size="mini" @click="backClick">返回</el-button>
 	</div>
-	<div class="detail-preview" :style='{"width":"70%","margin":"10px auto","position":"relative","alignItems":"flex-start","flexWrap":"wrap","display":"flex"}'>
+	<div class="detail-preview" :style='{"width":"84%","margin":"10px auto","position":"relative","alignItems":"flex-start","flexWrap":"wrap","display":"flex"}'>
 		<div class="attr" :style='{"padding":"0 10px","margin":"0 0 0 10px","background":"#f5f5f5","flex":"1","display":"flex","width":"calc(50% - 10px)","position":"relative","order":"2"}'>
 
 			<div class="info" :style='{"padding":"10px","margin":"0 0 0 10px","background":"none","flex":"1"}'>
-				<div class="item" :style='{"padding":"10px 0","margin":"0 0 10px 0","alignItems":"center","background":"none","justifyContent":"space-between","display":"flex"}'>
+				<div class="item" :style='{"padding":"4px 0","margin":"0 0 4px 0","alignItems":"center","background":"none","justifyContent":"space-between","display":"flex"}'>
 					<div :style='{"width":"calc(100% - 130px)","margin":"0 10px 0 0","fontSize":"18px","color":"#000","flex":"1","fontWeight":"bold"}'>
                     {{detail.chanpinmingcheng}}
                     </div>
 					<div @click="storeup(1)" v-show="!isStoreup" :style='{"width":"120px","padding":"10px","borderRadius":"4px","textAlign":"center","background":"#A293B6"}'><i v-if="true" :style='{"color":"#fff","fontSize":"14px"}' class="el-icon-star-off"></i><span :style='{"color":"#fff","fontSize":"14px"}'>点我收藏({{detail.storeupnum}})</span></div>
 					<div @click="storeup(-1)" v-show="isStoreup" :style='{"width":"120px","padding":"10px","borderRadius":"4px","textAlign":"center","background":"#A293B6"}'><i v-if="true" :style='{"color":"#fff","fontSize":"14px"}' class="el-icon-star-on"></i><span :style='{"color":"#fff","fontSize":"14px"}'>取消收藏({{detail.storeupnum}})</span></div>
 				</div>
-				<div class="item" :style='{"padding":"10px 0","margin":"0 0 10px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}' v-if="detail.price">
-					<div class="lable" :style='{"padding":"0 10px","color":"#818181","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"40px","height":"40px"}'>价格</div>
-					<div style="font-weight: bold;" :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"24px","color":"#818181","flex":"1","height":"auto"}'><span :style='{"fontSize":"12px"}'>￥</span>{{detail.price}}</div>
+				<div class="item" :style='{"padding":"4px 0","margin":"0 0 4px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}' v-if="detail.price">
+					<div class="lable" :style='{"padding":"0 10px","color":"#111","fontWeight":"700","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"28px","height":"28px"}'>价格</div>
+					<div style="font-weight: bold;" :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"28px","color":"#111","fontWeight":"700","flex":"1","height":"auto"}'><span :style='{"fontSize":"12px"}'>￥</span>{{detail.price}}</div>
 				</div>
-				<div class="item" :style='{"padding":"10px 0","margin":"0 0 10px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}' v-if="detail.price">
-					<div class="lable" :style='{"padding":"0 10px","color":"#818181","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"40px","height":"40px"}'>会员价</div>
-					<div style="font-weight: bold;" :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"24px","color":"#818181","flex":"1","height":"auto"}'><span :style='{"fontSize":"12px"}'>￥</span>{{detail.vipprice}}</div>
+				<div class="item" :style='{"padding":"4px 0","margin":"0 0 4px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}' v-if="detail.price">
+					<div class="lable" :style='{"padding":"0 10px","color":"#111","fontWeight":"700","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"28px","height":"28px"}'>会员价</div>
+					<div style="font-weight: bold;" :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"28px","color":"#111","fontWeight":"700","flex":"1","height":"auto"}'><span :style='{"fontSize":"12px"}'>￥</span>{{detail.vipprice}}</div>
 				</div>
-				<div class="item" :style='{"padding":"10px 0","margin":"0 0 10px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}' v-if="detail.jf">
-					<div class="lable" :style='{"padding":"0 10px","color":"#818181","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"40px","height":"40px"}'>积分</div>
-					<div style="color: red;font-weight: bold;" :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"24px","color":"#818181","flex":"1","height":"auto"}'>{{detail.jf}}</div>
+				<div class="item" :style='{"padding":"4px 0","margin":"0 0 4px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}' v-if="detail.jf">
+					<div class="lable" :style='{"padding":"0 10px","color":"#111","fontWeight":"700","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"28px","height":"28px"}'>积分</div>
+					<div style="color: red;font-weight: bold;" :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"28px","color":"#111","fontWeight":"700","flex":"1","height":"auto"}'>{{detail.jf}}</div>
 				</div>
-				<div class="item" :style='{"padding":"10px 0","margin":"0 0 10px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}'>
-					<div class="lable" :style='{"padding":"0 10px","color":"#818181","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"40px","height":"40px"}'>单限</div>
-					<div :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"24px","color":"#818181","flex":"1","height":"auto"}'>{{detail.onelimittimes}}</div>
+				<div class="item" :style='{"padding":"4px 0","margin":"0 0 4px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}'>
+					<div class="lable" :style='{"padding":"0 10px","color":"#111","fontWeight":"700","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"28px","height":"28px"}'>单限</div>
+					<div :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"28px","color":"#111","fontWeight":"700","flex":"1","height":"auto"}'>{{detail.onelimittimes}}</div>
 				</div>
-				<div class="item" :style='{"padding":"10px 0","margin":"0 0 10px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}'>
-					<div class="lable" :style='{"padding":"0 10px","color":"#818181","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"40px","height":"40px"}'>库存</div>
-					<div :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"24px","color":"#818181","flex":"1","height":"auto"}'>{{detail.alllimittimes}}</div>
+				<div class="item" :style='{"padding":"4px 0","margin":"0 0 4px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}'>
+					<div class="lable" :style='{"padding":"0 10px","color":"#111","fontWeight":"700","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"28px","height":"28px"}'>库存</div>
+					<div :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"28px","color":"#111","fontWeight":"700","flex":"1","height":"auto"}'>{{detail.alllimittimes}}</div>
 				</div>
-				<div class="item" :style='{"padding":"10px 0","margin":"0 0 10px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}'>
-					<div class="lable" :style='{"padding":"0 10px","color":"#818181","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"40px","height":"40px"}'>产品编号</div>
-					<div  :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"24px","color":"#818181","flex":"1","height":"auto"}'>{{detail.chanpinbianhao}}</div>
+				<div class="item" :style='{"padding":"4px 0","margin":"0 0 4px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}'>
+					<div class="lable" :style='{"padding":"0 10px","color":"#111","fontWeight":"700","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"28px","height":"28px"}'>产品编号</div>
+					<div  :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"28px","color":"#111","fontWeight":"700","flex":"1","height":"auto"}'>{{detail.chanpinbianhao}}</div>
 				</div>
-				<div class="item" :style='{"padding":"10px 0","margin":"0 0 10px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}'>
-					<div class="lable" :style='{"padding":"0 10px","color":"#818181","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"40px","height":"40px"}'>产品分类</div>
-					<div  :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"24px","color":"#818181","flex":"1","height":"auto"}'>{{detail.chanpinfenlei}}</div>
+				<div class="item" :style='{"padding":"4px 0","margin":"0 0 4px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}'>
+					<div class="lable" :style='{"padding":"0 10px","color":"#111","fontWeight":"700","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"28px","height":"28px"}'>产品分类</div>
+					<div  :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"28px","color":"#111","fontWeight":"700","flex":"1","height":"auto"}'>{{detail.chanpinfenlei}}</div>
 				</div>
-				<div class="item" :style='{"padding":"10px 0","margin":"0 0 10px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}'>
-					<div class="lable" :style='{"padding":"0 10px","color":"#818181","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"40px","height":"40px"}'>发布日期</div>
-					<div  :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"24px","color":"#818181","flex":"1","height":"auto"}'>{{detail.faburiqi}}</div>
+				<div class="item" :style='{"padding":"4px 0","margin":"0 0 4px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}'>
+					<div class="lable" :style='{"padding":"0 10px","color":"#111","fontWeight":"700","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"28px","height":"28px"}'>发布日期</div>
+					<div  :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"28px","color":"#111","fontWeight":"700","flex":"1","height":"auto"}'>{{detail.faburiqi}}</div>
 				</div>
-				<div class="item" :style='{"padding":"10px 0","margin":"0 0 10px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}'>
-					<div class="lable" :style='{"padding":"0 10px","color":"#818181","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"40px","height":"40px"}'>保质期</div>
-					<div  :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"24px","color":"#818181","flex":"1","height":"auto"}'>{{detail.baozhiqi}}</div>
+				<div class="item" :style='{"padding":"4px 0","margin":"0 0 4px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}'>
+					<div class="lable" :style='{"padding":"0 10px","color":"#111","fontWeight":"700","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"28px","height":"28px"}'>保质期</div>
+					<div  :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"28px","color":"#111","fontWeight":"700","flex":"1","height":"auto"}'>{{detail.baozhiqi}}</div>
 				</div>
-				<div class="item" :style='{"padding":"10px 0","margin":"0 0 10px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}'>
-					<div class="lable" :style='{"padding":"0 10px","color":"#818181","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"40px","height":"40px"}'>生产地</div>
-					<div  :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"24px","color":"#818181","flex":"1","height":"auto"}'>{{detail.shengchandi}}</div>
+				<div class="item" :style='{"padding":"4px 0","margin":"0 0 4px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}'>
+					<div class="lable" :style='{"padding":"0 10px","color":"#111","fontWeight":"700","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"28px","height":"28px"}'>生产地</div>
+					<div  :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"28px","color":"#111","fontWeight":"700","flex":"1","height":"auto"}'>{{detail.shengchandi}}</div>
 				</div>
-				<div class="item" :style='{"padding":"10px 0","margin":"0 0 10px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}'>
-					<div class="lable" :style='{"padding":"0 10px","color":"#818181","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"40px","height":"40px"}'>规格</div>
-					<div  :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"24px","color":"#818181","flex":"1","height":"auto"}'>{{detail.guige}}</div>
+				<div class="item" :style='{"padding":"4px 0","margin":"0 0 4px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}'>
+					<div class="lable" :style='{"padding":"0 10px","color":"#111","fontWeight":"700","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"28px","height":"28px"}'>规格</div>
+					<div  :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"28px","color":"#111","fontWeight":"700","flex":"1","height":"auto"}'>{{detail.guige}}</div>
 				</div>
-        <div class="item" :style='{"padding":"10px 0","margin":"0 0 10px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}'>
-          <div class="label" :style='{"padding":"0 10px","color":"#818181","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"40px","height":"40px"}'>供货时间</div>
-          <div :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"24px","color":"#818181","flex":"1","height":"auto"}'>{{detail.gonghuoshijian || '暂无'}}</div>
+        <div class="item" :style='{"padding":"4px 0","margin":"0 0 4px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}'>
+          <div class="label" :style='{"padding":"0 10px","color":"#111","fontWeight":"700","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"28px","height":"28px"}'>供货时间</div>
+          <div :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"28px","color":"#111","fontWeight":"700","flex":"1","height":"auto"}'>{{detail.gonghuoshijian || '暂无'}}</div>
         </div>
 
-        <div class="item" :style='{"padding":"10px 0","margin":"0 0 10px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}'>
-          <div class="label" :style='{"padding":"0 10px","color":"#818181","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"40px","height":"40px"}'>供货数量</div>
-          <div :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"24px","color":"#818181","flex":"1","height":"auto"}'>{{detail.gonghuoshuliang || 0}}</div>
+        <div class="item" :style='{"padding":"4px 0","margin":"0 0 4px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}'>
+          <div class="label" :style='{"padding":"0 10px","color":"#111","fontWeight":"700","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"28px","height":"28px"}'>供货数量</div>
+          <div :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"28px","color":"#111","fontWeight":"700","flex":"1","height":"auto"}'>{{detail.gonghuoshuliang || 0}}</div>
         </div>
 
-        <div class="item" :style='{"padding":"10px 0","margin":"0 0 10px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}'>
-          <div class="label" :style='{"padding":"0 10px","color":"#818181","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"40px","height":"40px"}'>销量</div>
-          <div :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"24px","color":"#818181","flex":"1","height":"auto"}'>{{detail.salenum || 0}}</div>
+        <div class="item" :style='{"padding":"4px 0","margin":"0 0 4px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}'>
+          <div class="label" :style='{"padding":"0 10px","color":"#111","fontWeight":"700","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"28px","height":"28px"}'>销量</div>
+          <div :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"28px","color":"#111","fontWeight":"700","flex":"1","height":"auto"}'>{{detail.salenum || 0}}</div>
         </div>
 
-        <div class="item" :style='{"padding":"10px 0","margin":"0 0 10px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}'>
-          <div class="label" :style='{"padding":"0 10px","color":"#818181","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"40px","height":"40px"}'>点赞量</div>
-          <div :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"24px","color":"#818181","flex":"1","height":"auto"}'>{{detail.likenum || 0}}</div>
+        <div class="item" :style='{"padding":"4px 0","margin":"0 0 4px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}'>
+          <div class="label" :style='{"padding":"0 10px","color":"#111","fontWeight":"700","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"28px","height":"28px"}'>点赞量</div>
+          <div :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"28px","color":"#111","fontWeight":"700","flex":"1","height":"auto"}'>{{detail.likenum || 0}}</div>
         </div>
 
-        <div class="item" :style='{"padding":"10px 0","margin":"0 0 10px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}'>
-          <div class="label" :style='{"padding":"0 10px","color":"#818181","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"40px","height":"40px"}'>好评数</div>
-          <div :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"24px","color":"#818181","flex":"1","height":"auto"}'>{{detail.goodcommentnum || 0}}</div>
+        <div class="item" :style='{"padding":"4px 0","margin":"0 0 4px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}'>
+          <div class="label" :style='{"padding":"0 10px","color":"#111","fontWeight":"700","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"28px","height":"28px"}'>好评数</div>
+          <div :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"28px","color":"#111","fontWeight":"700","flex":"1","height":"auto"}'>{{detail.goodcommentnum || 0}}</div>
         </div>
-				<div class="item" :style='{"padding":"10px 0","margin":"0 0 10px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}'>
-					<div class="lable" :style='{"padding":"0 10px","color":"#818181","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"40px","height":"40px"}'>供应商账号</div>
-					<div  :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"24px","color":"#818181","flex":"1","height":"auto"}'>{{detail.nonghuzhanghao}}</div>
+				<div class="item" :style='{"padding":"4px 0","margin":"0 0 4px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}'>
+					<div class="lable" :style='{"padding":"0 10px","color":"#111","fontWeight":"700","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"28px","height":"28px"}'>供应商账号</div>
+					<div  :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"28px","color":"#111","fontWeight":"700","flex":"1","height":"auto"}'>{{detail.nonghuzhanghao}}</div>
 				</div>
-				<div class="item" :style='{"padding":"10px 0","margin":"0 0 10px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}'>
-					<div class="lable" :style='{"padding":"0 10px","color":"#818181","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"40px","height":"40px"}'>供应商姓名</div>
-					<div  :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"24px","color":"#818181","flex":"1","height":"auto"}'>{{detail.nonghuxingming}}</div>
+				<div class="item" :style='{"padding":"4px 0","margin":"0 0 4px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}'>
+					<div class="lable" :style='{"padding":"0 10px","color":"#111","fontWeight":"700","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"28px","height":"28px"}'>供应商姓名</div>
+					<div  :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"28px","color":"#111","fontWeight":"700","flex":"1","height":"auto"}'>{{detail.nonghuxingming}}</div>
 				</div>
-				<div class="item" :style='{"padding":"10px 0","margin":"0 0 10px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}'>
-					<div class="lable" :style='{"padding":"0 10px","color":"#818181","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"40px","height":"40px"}'>点击次数</div>
-					<div  :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"24px","color":"#818181","flex":"1","height":"auto"}'>{{detail.clicknum}}</div>
+				<div class="item" :style='{"padding":"4px 0","margin":"0 0 4px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}'>
+					<div class="lable" :style='{"padding":"0 10px","color":"#111","fontWeight":"700","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"28px","height":"28px"}'>点击次数</div>
+					<div  :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"28px","color":"#111","fontWeight":"700","flex":"1","height":"auto"}'>{{detail.clicknum}}</div>
 				</div>
 				<div class="btn" :style='{"padding":"10px 0","flexWrap":"wrap","display":"flex"}'>
 					<el-input-number :style='{"width":"220px","margin":"0 calc(100% - 220px) 10px 0","lineHeight":"38px","position":"relative","display":"inline-block","order":"1"}' v-if="detail.alllimittimes" :min=1 v-model="buynumber"></el-input-number>
@@ -115,11 +115,11 @@
 			</div>
 		</div>
 		
-			<div class="swiper3" v-if="detailBanner.length" :style='{"padding":"20px 20px 60px","boxShadow":"0 1px 8px rgba(0,0,0,.2)","margin":"0 0 0","background":"#fff","width":"50%","height":"auto","order":"1"}'>
-			  <div class="big" :style='{"border":"0","width":"100%","margin":"0 0 20px","position":"relative","background":"#fff","height":"500px"}'>
+			<div class="swiper3" v-if="detailBanner.length" :style='{"padding":"10px 10px 20px","boxShadow":"0 1px 8px rgba(0,0,0,.2)","margin":"0 0 0","background":"#fff","width":"50%","height":"auto","order":"1"}'>
+			  <div class="big" :style='{"border":"0","width":"100%","margin":"0 0 20px","position":"relative","background":"#fff","height":"340px"}'>
 				<img id="big" :style='{"border":"1px solid #eee","boxShadow":"none","objectFit":"contain","display":"block","width":"100%","height":"100%","zIndex":"1"}' :src="swiperBigUrl" class="image">
 			  </div>
-			  <div class="samll" :style='{"width":"100%","padding":"0 0","background":"#fff","display":"flex","height":"100px"}'>
+			  <div class="samll" :style='{"width":"100%","padding":"0 0","background":"#fff","display":"flex","height":"64px"}'>
 			    <div :style='{"border":"0","width":"25%","margin":"0 5px","position":"relative","background":"#fff","height":"100%"}' v-for="item in detailBanner" :key="item.id">
 				  <img :style='{"width":"100%","boxShadow":"0 1px 8px rgba(0,0,0,.2)","objectFit":"contain","display":"block","height":"100%","zIndex":"1"}' v-if="item.substr(0,4)=='http'" :src="item" @click="swiperClick3(item)" class="image">
 				  <img :style='{"width":"100%","boxShadow":"0 1px 8px rgba(0,0,0,.2)","objectFit":"contain","display":"block","height":"100%","zIndex":"1"}' v-else :src="baseUrl + item" @click="swiperClick3(baseUrl + item)" class="image">
@@ -159,14 +159,14 @@
 							<el-image v-if="!item.avatarurl" :style='{"width":"40px","margin":"0 10px 0 0","borderRadius":"100%","objectFit":"cover","height":"40px"}' :size="50" :src="require('@/assets/touxiang.png')"></el-image>
 							<div :style='{"color":"#333","fontSize":"16px"}' class="name">{{item.nickname}}</div>
 						</div>
-						<div :style='{"padding":"8px","boxShadow":"none","margin":"10px 0px 0px","color":"#9E9E9E","borderRadius":"0","background":"none","wordWrap":"break-word","lineHeight":"30px","fontSize":"14px"}' class="content-block-ask">
+						<div :style='{"padding":"8px","boxShadow":"none","margin":"10px 0px 0px","color":"#111","fontWeight":"700","borderRadius":"0","background":"none","wordWrap":"break-word","lineHeight":"30px","fontSize":"14px"}' class="content-block-ask">
 							<div v-html="item.content"></div>
 							<div class="btn" :style='{"width":"100%","margin":"8px 0 0 0","alignItems":"center","justifyContent":"flex-start","display":"flex","height":"40px"}'>
 							  <!-- <el-button :style='{"border":"0","cursor":"pointer","padding":"0 10px","margin":"0 10px","outline":"none","color":"rgba(255, 255, 255, 1)","borderRadius":"5px","background":"#3B2E7E","width":"auto","lineHeight":"30px","fontSize":"14px","height":"30px"}'>回复</el-button> -->
 							  <el-button v-if="showIndex==item.id&&userid==item.userid" @click="discussDel(item.id)" :style='{"border":"0","cursor":"pointer","padding":"0 10px","margin":"0 10px","outline":"none","color":"rgba(255, 255, 255, 1)","borderRadius":"5px","background":"#9F9F9F","width":"auto","lineHeight":"30px","fontSize":"14px","height":"30px"}'>删除</el-button>
 							</div>
 						</div>
-						<div :style='{"padding":"8px","boxShadow":"none","margin":"10px 0px 0px","color":"#9E9E9E","borderRadius":"0","background":"none","wordWrap":"break-word","lineHeight":"30px","fontSize":"14px"}' class="content-block-reply" v-if="item.reply">
+						<div :style='{"padding":"8px","boxShadow":"none","margin":"10px 0px 0px","color":"#111","fontWeight":"700","borderRadius":"0","background":"none","wordWrap":"break-word","lineHeight":"30px","fontSize":"14px"}' class="content-block-reply" v-if="item.reply">
 							回复：<span v-html="item.reply"></span>
 						</div>
 					</div>

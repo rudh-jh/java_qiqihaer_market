@@ -83,7 +83,14 @@ public class NonghuController {
     @RequestMapping("/register")
     public R register(@RequestBody NonghuEntity nonghu){
     	//ValidatorUtils.validateEntity(nonghu);
-    	NonghuEntity u = nonghuService.selectOne(new EntityWrapper<NonghuEntity>().eq("nonghuzhanghao", nonghu.getNonghuzhanghao()));
+        if(StringUtils.isBlank(nonghu.getNonghuzhanghao()) || nonghu.getNonghuzhanghao().length() < 6) {
+            return R.error("供应商账号至少6位");
+        }
+        if(StringUtils.isBlank(nonghu.getMima()) || nonghu.getMima().length() < 6) {
+            return R.error("密码至少6位");
+        }
+
+        NonghuEntity u = nonghuService.selectOne(new EntityWrapper<NonghuEntity>().eq("nonghuzhanghao", nonghu.getNonghuzhanghao()));
 		if(u!=null) {
 			return R.error("注册用户已存在");
 		}

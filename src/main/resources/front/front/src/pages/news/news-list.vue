@@ -50,8 +50,8 @@
 					</div>
 					<div :style='{"flex":"1","flexDirection":"column","justifyContent":"center","display":"flex","height":"100%"}'>
 					  <div :style='{"lineHeight":"30px","fontSize":"16px","whiteSpace":"nowrap","overflow":"hidden","textOverflow":"ellipsis","color":"#333"}'>{{item.title}}</div>
-					  <div :style='{"padding":"0 20px 0 0","overflow":"hidden","color":"#666","display":"-webkit-box","lineHeight":"20px","fontSize":"14px","-webkit-box-orient":"vertical","-webkit-line-clamp":"2"}'>{{item.introduction}}</div>
-					  <span class="icon iconfont icon-jiantou37" :style='{"lineHeight":"20px","fontSize":"14px","color":"#999","float":"right","display":"none"}'></span>
+					  <div :style='{"padding":"0 20px 0 0","overflow":"hidden","color":"#222","fontWeight":"600","display":"-webkit-box","lineHeight":"20px","fontSize":"14px","-webkit-box-orient":"vertical","-webkit-line-clamp":"2"}'>{{item.introduction}}</div>
+					  <span class="icon iconfont icon-jiantou37" :style='{"lineHeight":"20px","fontSize":"14px", "color":"#222","fontWeight":"600","float":"right","display":"none"}'></span>
 					</div>
 				  </div>
 			  </template>
@@ -61,7 +61,7 @@
 			<template v-for="item,index in newsList">
 				<div v-if="index > 4" @click="toNewsDetail(item)" :style='{"padding":"0 10px","boxShadow":"0px 4px 10px 0px rgba(0,0,0,0.3)","borderColor":"#efefef","margin":"0 0 10px","borderWidth":"0","display":"flex","width":"100%","borderStyle":"solid","justifyContent":"space-between"}'>
 				  <div :style='{"whiteSpace":"nowrap","overflow":"hidden","color":"#000","width":"50%","lineHeight":"50px","fontSize":"16px","textOverflow":"ellipsis","fontWeight":"bold"}'>{{item.title}}</div>
-				  <div :style='{"color":"#818181","lineHeight":"50px","fontSize":"14px"}'>{{item.addtime.split(" ")[0]}}</div>
+				  <div :style='{"color":"#111","fontWeight":"700","lineHeight":"50px","fontSize":"14px"}'>{{item.addtime.split(" ")[0]}}</div>
 				</div>
 			</template>
 		  </div>

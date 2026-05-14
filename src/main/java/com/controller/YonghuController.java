@@ -83,8 +83,16 @@ public class YonghuController {
     @RequestMapping("/register")
     public R register(@RequestBody YonghuEntity yonghu){
     	//ValidatorUtils.validateEntity(yonghu);
-    	YonghuEntity u = yonghuService.selectOne(new EntityWrapper<YonghuEntity>().eq("yonghuzhanghao", yonghu.getYonghuzhanghao()));
-		if(u!=null) {
+        if(StringUtils.isBlank(yonghu.getYonghuzhanghao()) || yonghu.getYonghuzhanghao().length() < 6) {
+            return R.error("用户账号至少6位");
+        }
+        if(StringUtils.isBlank(yonghu.getMima()) || yonghu.getMima().length() < 6) {
+            return R.error("密码至少6位");
+        }
+
+        YonghuEntity u = yonghuService.selectOne(new EntityWrapper<YonghuEntity>().eq("yonghuzhanghao", yonghu.getYonghuzhanghao()));
+
+        if(u!=null) {
 			return R.error("注册用户已存在");
 		}
 		Long uId = new Date().getTime();

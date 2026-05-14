@@ -18,21 +18,21 @@
 					<div :style='{"width":"calc(100% - 130px)","margin":"0 10px 0 0","fontSize":"18px","color":"#000","flex":"1","fontWeight":"bold"}'>
                     </div>
 				</div>
-				<div class="item" :style='{"padding":"10px 0","margin":"0 0 10px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}'>
-					<div class="lable" :style='{"padding":"0 10px","color":"#818181","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"40px","height":"40px"}'>供应商账号</div>
-					<div  :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"24px","color":"#818181","flex":"1","height":"auto"}'>{{detail.nonghuzhanghao}}</div>
+				<div class="item" :style='{"padding":"4px 0","margin":"0 0 4px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}'>
+					<div class="lable" :style='{"padding":"0 10px","color":"#111","fontWeight":"700","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"28px","height":"28px"}'>供应商账号</div>
+					<div  :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"24px","color":"#111","fontWeight":"700","flex":"1","height":"auto"}'>{{detail.nonghuzhanghao}}</div>
 				</div>
-				<div class="item" :style='{"padding":"10px 0","margin":"0 0 10px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}'>
-					<div class="lable" :style='{"padding":"0 10px","color":"#818181","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"40px","height":"40px"}'>供应商姓名</div>
-					<div  :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"24px","color":"#818181","flex":"1","height":"auto"}'>{{detail.nonghuxingming}}</div>
+				<div class="item" :style='{"padding":"4px 0","margin":"0 0 4px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}'>
+					<div class="lable" :style='{"padding":"0 10px","color":"#111","fontWeight":"700","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"28px","height":"28px"}'>供应商姓名</div>
+					<div  :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"24px","color":"#111","fontWeight":"700","flex":"1","height":"auto"}'>{{detail.nonghuxingming}}</div>
 				</div>
-				<div class="item" :style='{"padding":"10px 0","margin":"0 0 10px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}'>
-					<div class="lable" :style='{"padding":"0 10px","color":"#818181","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"40px","height":"40px"}'>性别</div>
-					<div  :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"24px","color":"#818181","flex":"1","height":"auto"}'>{{detail.xingbie}}</div>
+				<div class="item" :style='{"padding":"4px 0","margin":"0 0 4px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}'>
+					<div class="lable" :style='{"padding":"0 10px","color":"#111","fontWeight":"700","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"28px","height":"28px"}'>性别</div>
+					<div  :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"24px","color":"#111","fontWeight":"700","flex":"1","height":"auto"}'>{{detail.xingbie}}</div>
 				</div>
-				<div class="item" :style='{"padding":"10px 0","margin":"0 0 10px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}'>
-					<div class="lable" :style='{"padding":"0 10px","color":"#818181","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"40px","height":"40px"}'>供应商电话</div>
-					<div  :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"24px","color":"#818181","flex":"1","height":"auto"}'>{{detail.nonghudianhua}}</div>
+				<div class="item" :style='{"padding":"4px 0","margin":"0 0 4px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}'>
+					<div class="lable" :style='{"padding":"0 10px","color":"#111","fontWeight":"700","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"28px","height":"28px"}'>供应商电话</div>
+					<div  :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"24px","color":"#111","fontWeight":"700","flex":"1","height":"auto"}'>{{detail.nonghudianhua}}</div>
 				</div>
 				<div class="btn" :style='{"padding":"10px 0","flexWrap":"wrap","display":"flex"}'>
 					<el-button :style='{"border":"0","cursor":"pointer","padding":"0 10px","margin":"0 auto 10px","color":"#fff","outline":"none","borderRadius":"5px","background":"#A293B6","width":"32%","lineHeight":"40px","fontSize":"16px","height":"40px","order":"2"}' v-if="btnAuth('nonghu','修改')" @click="editClick">修改</el-button>

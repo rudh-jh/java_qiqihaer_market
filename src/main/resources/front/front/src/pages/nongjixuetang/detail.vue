@@ -21,16 +21,16 @@
 					<div @click="storeup(1)" v-show="!isStoreup" :style='{"width":"120px","padding":"10px","borderRadius":"4px","textAlign":"center","background":"#A293B6"}'><i v-if="true" :style='{"color":"#fff","fontSize":"14px"}' class="el-icon-star-off"></i><span :style='{"color":"#fff","fontSize":"14px"}'>点我收藏({{detail.storeupnum}})</span></div>
 					<div @click="storeup(-1)" v-show="isStoreup" :style='{"width":"120px","padding":"10px","borderRadius":"4px","textAlign":"center","background":"#A293B6"}'><i v-if="true" :style='{"color":"#fff","fontSize":"14px"}' class="el-icon-star-on"></i><span :style='{"color":"#fff","fontSize":"14px"}'>取消收藏({{detail.storeupnum}})</span></div>
 				</div>
-				<div class="item" :style='{"padding":"10px 0","margin":"0 0 10px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}'>
-					<div class="lable" :style='{"padding":"0 10px","color":"#818181","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"40px","height":"40px"}'>课程分类</div>
-					<div  :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"24px","color":"#818181","flex":"1","height":"auto"}'>{{detail.kechengfenlei}}</div>
+				<div class="item" :style='{"padding":"4px 0","margin":"0 0 4px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}'>
+					<div class="lable" :style='{"padding":"0 10px","color":"#111","fontWeight":"700","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"28px","height":"28px"}'>课程分类</div>
+					<div  :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"24px","color":"#111","fontWeight":"700","flex":"1","height":"auto"}'>{{detail.kechengfenlei}}</div>
 				</div>
-				<div class="item" :style='{"padding":"10px 0","margin":"0 0 10px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}'>
-					<div class="lable" :style='{"padding":"0 10px","color":"#818181","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"40px","height":"40px"}'>课程简介</div>
-					<div  :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"24px","color":"#818181","flex":"1","height":"auto"}'>{{detail.kechengjianjie}}</div>
+				<div class="item" :style='{"padding":"4px 0","margin":"0 0 4px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}'>
+					<div class="lable" :style='{"padding":"0 10px","color":"#111","fontWeight":"700","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"28px","height":"28px"}'>课程简介</div>
+					<div  :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"24px","color":"#111","fontWeight":"700","flex":"1","height":"auto"}'>{{detail.kechengjianjie}}</div>
 				</div>
-				<div class="item" :style='{"padding":"10px 0","margin":"0 0 10px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}'>
-					<div class="lable" :style='{"padding":"0 10px","color":"#818181","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"40px","height":"40px"}'>文档资料</div>
+				<div class="item" :style='{"padding":"4px 0","margin":"0 0 4px 0","background":"#f5f5f5","justifyContent":"spaceBetween","display":"flex"}'>
+					<div class="lable" :style='{"padding":"0 10px","color":"#111","fontWeight":"700","textAlign":"left","width":"100px","fontSize":"14px","lineHeight":"28px","height":"28px"}'>文档资料</div>
 					<el-button :style='{"padding":"0px 10px","margin":"5px 0","color":"#fff","textAlign":"center","background":"#000000","width":"100px","lineHeight":"30px","fontSize":"14px","textDecoration":"none","height":"30px"}' @click="download(detail.wendangziliao)">点击下载</el-button>
 				</div>
 				<div class="btn" :style='{"padding":"10px 0","flexWrap":"wrap","display":"flex"}'>
@@ -88,14 +88,14 @@
 							<el-image v-if="!item.avatarurl" :style='{"width":"40px","margin":"0 10px 0 0","borderRadius":"100%","objectFit":"cover","height":"40px"}' :size="50" :src="require('@/assets/touxiang.png')"></el-image>
 							<div :style='{"color":"#333","fontSize":"16px"}' class="name">{{item.nickname}}</div>
 						</div>
-						<div :style='{"padding":"8px","boxShadow":"none","margin":"10px 0px 0px","color":"#9E9E9E","borderRadius":"0","background":"none","wordWrap":"break-word","lineHeight":"30px","fontSize":"14px"}' class="content-block-ask">
+						<div :style='{"padding":"8px","boxShadow":"none","margin":"10px 0px 0px","color":"#111","fontWeight":"700","borderRadius":"0","background":"none","wordWrap":"break-word","lineHeight":"30px","fontSize":"14px"}' class="content-block-ask">
 							<div v-html="item.content"></div>
 							<div class="btn" :style='{"width":"100%","margin":"8px 0 0 0","alignItems":"center","justifyContent":"flex-start","display":"flex","height":"40px"}'>
 							  <!-- <el-button :style='{"border":"0","cursor":"pointer","padding":"0 10px","margin":"0 10px","outline":"none","color":"rgba(255, 255, 255, 1)","borderRadius":"5px","background":"#3B2E7E","width":"auto","lineHeight":"30px","fontSize":"14px","height":"30px"}'>回复</el-button> -->
 							  <el-button v-if="showIndex==item.id&&userid==item.userid" @click="discussDel(item.id)" :style='{"border":"0","cursor":"pointer","padding":"0 10px","margin":"0 10px","outline":"none","color":"rgba(255, 255, 255, 1)","borderRadius":"5px","background":"#9F9F9F","width":"auto","lineHeight":"30px","fontSize":"14px","height":"30px"}'>删除</el-button>
 							</div>
 						</div>
-						<div :style='{"padding":"8px","boxShadow":"none","margin":"10px 0px 0px","color":"#9E9E9E","borderRadius":"0","background":"none","wordWrap":"break-word","lineHeight":"30px","fontSize":"14px"}' class="content-block-reply" v-if="item.reply">
+						<div :style='{"padding":"8px","boxShadow":"none","margin":"10px 0px 0px","color":"#111","fontWeight":"700","borderRadius":"0","background":"none","wordWrap":"break-word","lineHeight":"30px","fontSize":"14px"}' class="content-block-reply" v-if="item.reply">
 							回复：<span v-html="item.reply"></span>
 						</div>
 					</div>

@@ -1,5 +1,5 @@
 <template>
-	<div class="main-content" :style='{"color":"#666","padding":"0px 30px 30px","fontSize":"14px"}'>
+	<div class="main-content" :style='{"color":"#222","fontWeight":"600","padding":"0px 30px 30px","fontSize":"14px"}'>
 		<!-- 列表页 -->
 		<template v-if="showFlag">
 			<el-form class="center-form-pv" :style='{"padding":"0px 0px 0","margin":"0px","overflow":"hidden","flexWrap":"wrap","background":"none","display":"flex","fontSize":"inherit"}' :inline="true" :model="searchForm">

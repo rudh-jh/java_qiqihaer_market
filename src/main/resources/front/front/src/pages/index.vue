@@ -7,7 +7,7 @@
 			  <span :style='{"padding":"0 0 0 12px","color":"#000","top":"-60px","left":"20px","lineHeight":"60px","fontSize":"36px","position":"absolute","float":"left","fontWeight":"bold"}'>粮油产品线上销售平台</span>
 			</div>
 			
-			<div v-if="false" :style='{"color":"#666","margin":"0 10px","fontSize":"14px"}'>0753-1234567</div>
+			<div v-if="false" :style='{"color":"#222","fontWeight":"600","margin":"0 10px","fontSize":"14px"}'>0753-1234567</div>
 			<el-button v-if="Token" class="btn-shop" @click.native="goMenu('/index/cart')">
 				<span class="icon iconfont icon-wuliu8" :style='{"color":"inherit","margin":"0 4px 0 0","fontSize":"inherit"}'></span>
 				购物车
@@ -50,7 +50,7 @@
 
 
 			<div class="banner-preview" :style='{"width":"100%","height":"auto"}'>
-				<el-carousel :style='{"width":"100%","margin":"0 auto"}' trigger="click" indicator-position="inside" arrow="always" type="default" direction="vertical" height="600px" :autoplay="true" :interval="3000" :loop="true">
+				<el-carousel :style='{"width":"100%","margin":"0 auto"}' trigger="click" indicator-position="inside" arrow="always" type="default" direction="vertical" height="300px" :autoplay="true" :interval="3000" :loop="true">
 					<el-carousel-item :style='{"borderRadius":"0","width":"100%","height":"100%"}' v-for="item in carouselList" :key="item.id">
 						<el-image @click="carouselClick(item.url)" :style='{"objectFit":"cover","width":"100%","height":"100%"}' :src="baseUrl + item.value" fit="cover"></el-image>
 					</el-carousel-item>
@@ -273,8 +273,10 @@ export default {
 				cursor: pointer;
 				border: 0;
 				padding: 0 0px;
-				color: #9e9e9e;
-				white-space: nowrap;
+				//color: #9e9e9e;
+        color: #111;
+        font-weight: 700;
+        white-space: nowrap;
 				display: flex;
 				font-size: 18px;
 				line-height: 70px;
@@ -407,8 +409,10 @@ export default {
 				cursor: pointer;
 				border: 0;
 				padding: 0 0px;
-				color: #9e9e9e;
-				white-space: nowrap;
+				//color: #9e9e9e;
+        color: #111;
+        font-weight: 700;
+        white-space: nowrap;
 				display: flex;
 				font-size: 18px;
 				line-height: 70px;

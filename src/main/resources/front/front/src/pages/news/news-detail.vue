@@ -10,24 +10,24 @@
 			
 			<div :style='{"width":"50%","alignItems":"center","justifyContent":"flex-start","display":"flex"}'>
 			  <div :style='{"padding":"0 20px 0 0"}'>
-			    <span class="icon iconfont icon-shijian21" :style='{"margin":"0 2px 0 0","lineHeight":"1.5","fontSize":"12px","color":"#9E9E9E"}'></span>
-			    <span :style='{"color":"#9E9E9E","lineHeight":"1.5","fontSize":"12px"}'>发布时间：{{detail.addtime}}</span>
+			    <span class="icon iconfont icon-shijian21" :style='{"margin":"0 2px 0 0","lineHeight":"1.5","fontSize":"12px","color":"#111","fontWeight":"700"}'></span>
+			    <span :style='{"color":"#111","fontWeight":"700","lineHeight":"1.5","fontSize":"12px"}'>发布时间：{{detail.addtime}}</span>
 			  </div>
 			  <div :style='{"padding":"0","display":"none"}'>
-			    <span class="icon iconfont icon-geren16" :style='{"margin":"0 2px 0 0","lineHeight":"1.5","fontSize":"12px","color":"#666"}'></span>
-			    <span :style='{"color":"#666","lineHeight":"1.5","fontSize":"12px"}'>{{detail.name}}</span>
+			    <span class="icon iconfont icon-geren16" :style='{"margin":"0 2px 0 0","lineHeight":"1.5","fontSize":"12px","color":"#222","fontWeight":"600"}'></span>
+			    <span :style='{"color":"#222","fontWeight":"600","lineHeight":"1.5","fontSize":"12px"}'>{{detail.name}}</span>
 			  </div>
 			  <div :style='{"padding":"0 20px 0 0"}'>
-			    <span class="icon iconfont icon-zan10" :style='{"margin":"0 2px 0 0","lineHeight":"1.5","fontSize":"12px","color":"#9E9E9E"}'></span>
-			    <span :style='{"color":"#9E9E9E","lineHeight":"1.5","fontSize":"12px"}'>{{detail.thumbsupnum}}</span>
+			    <span class="icon iconfont icon-zan10" :style='{"margin":"0 2px 0 0","lineHeight":"1.5","fontSize":"12px","color":"#111","fontWeight":"700"}'></span>
+			    <span :style='{"color":"#111","fontWeight":"700","lineHeight":"1.5","fontSize":"12px"}'>{{detail.thumbsupnum}}</span>
 			  </div>
 			  <div :style='{"padding":"0 20px 0 0"}'>
-			    <span class="icon iconfont icon-shoucang10" :style='{"margin":"0 2px 0 0","lineHeight":"1.5","fontSize":"12px","color":"#9E9E9E"}'></span>
-			    <span :style='{"color":"#9E9E9E","lineHeight":"1.5","fontSize":"12px"}'>{{detail.storeupnum}}</span>
+			    <span class="icon iconfont icon-shoucang10" :style='{"margin":"0 2px 0 0","lineHeight":"1.5","fontSize":"12px","color":"#111","fontWeight":"700"}'></span>
+			    <span :style='{"color":"#111","fontWeight":"700","lineHeight":"1.5","fontSize":"12px"}'>{{detail.storeupnum}}</span>
 			  </div>
 			  <div :style='{"padding":"0"}'>
-			    <span class="icon iconfont icon-chakan9" :style='{"margin":"0 2px 0 0","lineHeight":"1.5","fontSize":"12px","color":"#9E9E9E"}'></span>
-			    <span :style='{"color":"#9E9E9E","lineHeight":"1.5","fontSize":"12px"}'>{{detail.clicknum}}</span>
+			    <span class="icon iconfont icon-chakan9" :style='{"margin":"0 2px 0 0","lineHeight":"1.5","fontSize":"12px","color":"#111","fontWeight":"700"}'></span>
+			    <span :style='{"color":"#111","fontWeight":"700","lineHeight":"1.5","fontSize":"12px"}'>{{detail.clicknum}}</span>
 			  </div>
 			</div>
 			<div class="operate" :style='{"width":"50%","padding":"10px 20px","alignItems":"center","justifyContent":"flex-end","display":"flex"}'>
